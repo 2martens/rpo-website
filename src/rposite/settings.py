@@ -221,6 +221,9 @@ TEMPLATES = [
     },
 ]
 
+# MEZZANINE paths
+SIGNUP_URL = "/support/"
+
 if DJANGO_VERSION < (1, 9):
     del TEMPLATES[0]["OPTIONS"]["builtins"]
 
