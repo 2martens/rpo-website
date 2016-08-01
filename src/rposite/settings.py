@@ -255,6 +255,8 @@ INSTALLED_APPS = (
     # "mezzanine.mobile",
 )
 
+AUTH_PROFILE_MODULE = "rpocore.Supporter"
+
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
 # response phase the middleware will be applied in reverse order.

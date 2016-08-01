@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from rpocore.models import SupportGroup
+
+admin.site.register(SupportGroup)
