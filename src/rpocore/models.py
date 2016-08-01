@@ -13,10 +13,24 @@ class SupportGroup(models.Model):
 
 class Supporter(models.Model):
     user = models.OneToOneField('auth.User')
-    statement = models.TextField(_('Support statement'), null=True)
+    statement = models.TextField(
+        _('Support statement'),
+        null=True,
+        help_text=_('This statement will appear on the list of supporters together with your name.')
+    )
     support_group = models.ForeignKey(SupportGroup, on_delete=models.PROTECT, null=True)
-    support_anonymous = models.BooleanField(_('Support anonymously'), default=False)
-    additional_information = models.CharField(_('Additional information'), max_length=50, blank=True)
+    support_anonymous = models.BooleanField(
+        _('Support anonymously'),
+        help_text=_('If checked your name will not appear on the list of supporters.'),
+        default=False
+    )
+    additional_information = models.CharField(
+        _('Additional information'),
+        max_length=50,
+        blank=True,
+        help_text=_('Here you can specify additional information about your activities, organizations, etc. It appears'
+                    ' next to your name in the list of supporters.')
+    )
     UNIVERSITIES = (
         ('UHH', 'Universität Hamburg'),
         ('TUHH', 'Technische Universität Hamburg'),
