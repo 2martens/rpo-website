@@ -1,6 +1,6 @@
-from django.contrib.auth import (login as auth_login)
+from django.contrib.auth import (login as auth_login, authenticate)
 from django.contrib.messages import *
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from django.template.response import TemplateResponse
 from django.utils.translation import ugettext_lazy as _
 from mezzanine.accounts import get_profile_form
@@ -35,3 +35,22 @@ def signup(request, template="accounts/account_signup.html",
     context = {"form": form, "title": _("Support RPO 2016")}
     context.update(extra_context or {})
     return TemplateResponse(request, template, context)
+
+
+def signup_verify(request, uidb36=None, token=None):
+    """
+    View for the link in the verification email sent to a new user
+    when they create an account and ``ACCOUNTS_VERIFICATION_REQUIRED``
+    is set to ``True``. Activates the user, logs them in and redirects
+    them to the get into action page.
+    """
+    user = authenticate(uidb36=uidb36, token=token, is_active=False)
+    if user is not None:
+        user.is_active = True
+        user.save()
+        auth_login(request, user)
+        success(request, _("Successfully supported the campaign"))
+        return redirect("/get-into-action/")
+    else:
+        error(request, _("The link you clicked is no longer valid."))
+        return redirect("/")
