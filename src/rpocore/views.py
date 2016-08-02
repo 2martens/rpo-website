@@ -8,8 +8,6 @@ from mezzanine.conf import settings
 from mezzanine.utils.email import send_approve_mail, send_verification_mail
 from mezzanine.utils.urls import next_url, login_redirect
 
-from rpocore.util import update_supporter_svg
-
 
 def signup(request, template="accounts/account_signup.html",
            extra_context=None):
