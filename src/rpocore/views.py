@@ -8,6 +8,8 @@ from mezzanine.conf import settings
 from mezzanine.utils.email import send_approve_mail, send_verification_mail
 from mezzanine.utils.urls import next_url, login_redirect
 
+from rpocore.util import update_supporter_svg
+
 
 def signup(request, template="accounts/account_signup.html",
            extra_context=None):
@@ -46,11 +48,14 @@ def signup_verify(request, uidb36=None, token=None):
     """
     user = authenticate(uidb36=uidb36, token=token, is_active=False)
     if user is not None:
+        become_active_url = getattr(
+            settings, "BECOME_ACTIVE_URL", "/become-active/"
+        )
         user.is_active = True
         user.save()
         auth_login(request, user)
         success(request, _("Successfully supported the campaign"))
-        return redirect("/get-into-action/")
+        return redirect(become_active_url)
     else:
         error(request, _("The link you clicked is no longer valid."))
         return redirect("/")
