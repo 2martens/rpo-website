@@ -84,21 +84,23 @@
     <h4>{% trans 'Support statements' %}</h4>
     {# expand with support statements, variables will come from page processor #}
     {% for supporter in supporters %}
-        <q>
-            {{ supporter.statement }}
-        </q>
-        <div>
-            <strong>
-            {% if supporter.support_anonymous %}
-                {% trans 'Anonymous supporter' %}
-            {% else %}
-                {{ supporter.user.first_name }} {{ supporter.user.last_name }}
-            {% endif %}
-            </strong>
-            {% ifnotequal supporter.additional_information '' %}
-                , <span>{{ supporter.additional_information }}</span>
-            {% endifnotequal %}
-            , <span>{{ supporter.get_university_display }}</span>
+        <div class="supportStatement">
+            <q>
+                {{ supporter.statement }}
+            </q>
+            <div>
+                <strong>
+                {% if supporter.support_anonymous %}
+                    {% trans 'Anonymous supporter' %}
+                {% else %}
+                    {{ supporter.user.first_name }} {{ supporter.user.last_name }}
+                {% endif %}
+                </strong>
+                {% ifnotequal supporter.additional_information '' %}
+                    , <span>{{ supporter.additional_information }}</span>
+                {% endifnotequal %}
+                , <span>{{ supporter.get_university_display }}</span>
+            </div>
         </div>
     {% endfor %}
 
