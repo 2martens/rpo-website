@@ -1,6 +1,10 @@
 .justify {
     text-align: justify;
 }
+.progress {
+    padding-left: 0;
+    padding-right: 0;
+}
 .supporterLabel {
     width: 80px;
     min-width: 80px;
@@ -8,4 +12,8 @@
 .supporterPanel {
     max-width: 400px;
     display: inline-block;
+}
+.statisticsLabel {
+    width: 400px;
+    min-width: 400px;
 }
