@@ -221,6 +221,9 @@ TEMPLATES = [
     },
 ]
 
+# MEZZANINE paths
+SIGNUP_URL = "/support/"
+
 if DJANGO_VERSION < (1, 9):
     del TEMPLATES[0]["OPTIONS"]["builtins"]
 
@@ -251,6 +254,17 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     # "mezzanine.mobile",
 )
+
+AUTH_PROFILE_MODULE = "rpocore.Supporter"
+
+ADMIN_MENU_ORDER = (
+    ('Content', ('pages.Page', 'blog.BlogPost', 'generic.ThreadedComment', ('Media Library', 'media-library'))),
+    ('Site', ('sites.Site', 'redirects.Redirect', 'conf.Setting')),
+    ('Users', ('auth.User', 'auth.Group')),
+    ('Campaign', ('rpocore.SupportGroup',))
+)
+
+ACCOUNTS_VERIFICATION_REQUIRED = True
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the

@@ -1,0 +1,48 @@
+{% extends "accounts/account_form.html" %}
+{% load i18n %}
+
+{% block main %}
+
+{% if request.user.is_authenticated %}
+    <p>{% trans "You already support the RPO 2016 campaign." %}</p>
+{% else %}
+    <div class="panel panel-info panel-default">
+        <div class="panel-body justify">
+            <p>
+                {% blocktrans %}
+                    Welcome on the support site. The information you enter here is largely used to showcase your support on the
+                    list of supporters. The email is required to verify your support. We encourage you to use a university provided
+                    email account to reduce fraud as much as possible.
+                {% endblocktrans %}
+            </p>
+            <p>
+                {% blocktrans %}
+                    The username and password will be required to log in. However
+                    after supporting the only difference is that you can edit your profile and with it the information you provided
+                    related to your support. So you can first support it anonymously and then later decide to support it with your
+                    name.
+                {% endblocktrans %}
+            </p>
+            <p>
+                {% blocktrans %}
+                    We're glad to have you on our side!
+                {% endblocktrans %}
+            </p>
+
+        </div>
+    </div>
+    {{ block.super }}
+{% endif %}
+
+{% endblock %}
+
+{% block account_form_actions %}
+    {% if settings.ACCOUNTS_APPROVAL_REQUIRED %}
+        <p>{% trans "After supporting the campaign, your support pledge will be reviewed for approval. You'll receive an email when your support counts." %}</p>
+    {% elif settings.ACCOUNTS_VERIFICATION_REQUIRED %}
+        <div class="alert alert-info" role="alert">
+            {% trans "After supporting the campaign, you'll receive an email with a link you need to click, in order for the support to count." %}
+        </div>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

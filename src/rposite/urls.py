@@ -66,6 +66,8 @@ urlpatterns += [
 
     # url("^$", mezzanine.blog.views.blog_post_list, name="home"),
 
+    url("^", include("rpocore.urls")),
+
     # MEZZANINE'S URLS
     # ----------------
     # ADD YOUR OWN URLPATTERNS *ABOVE* THE LINE BELOW.
