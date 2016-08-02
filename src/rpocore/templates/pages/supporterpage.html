@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags i18n %}
+
+{% block meta_title %}{{ page.meta_title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block main %}
+    <h4>{% trans 'Notable supporters' %}</h4>
+    {% for supporter in page.supporterpage.notable_supporters.all %}
+        <div class="panel panel-default supporterPanel">
+            <div class="panel-body">
+                <ul class="media-list">
+                    <li class="media">
+                        <div class="media-left">
+                            {% ifnotequal supporter.image '' %}
+                                <img class="media-object" src="{{ MEDIA_URL }}{{ supporter.image }}" alt="Image of {{ supporter.name }}" width="50">
+                            {% else %}
+                                {% trans 'No image available' %}
+                            {% endifnotequal %}
+                        </div>
+                        <div class="media-body">
+                            <div class="supporterLabel pull-left">{% trans 'Name' %}:</div><span class="supporterValue">{{ supporter.name }}</span><br />
+                            <div class="supporterLabel pull-left">{% trans 'Position' %}:</div><span class="supporterValue">{{ supporter.position }}</span><br />
+                            <div class="supporterLabel pull-left">{% trans 'Faculty' %}:</div><span class="supporterValue">{{ supporter.faculty }}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+
+    <h4>{% trans 'Supporter statistics' %}</h4>
+    {# expand with support statistics, variables will come from page processor #}
+
+    <h4>{% trans 'Support statements' %}</h4>
+    {# expand with support statements, variables will come from page processor #}
+
+{% endblock %}
