@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mezzanine.pages.models import Page
 
 
 class SupportGroup(models.Model):
@@ -38,3 +39,27 @@ class Supporter(models.Model):
         ('Other', 'Andere Universität oder Hochschule')
     )
     university = models.CharField(_('University'), choices=UNIVERSITIES, max_length=30, null=True)
+
+
+class NotableSupporter(models.Model):
+    name = models.CharField(max_length=30)
+    position = models.CharField(_('Position'), max_length=50)
+    FACULTIES = (
+        ('MIN', 'MIN'),
+        ('WiSo', 'WiSo'),
+        ('BWL', 'BWL'),
+        ('Recht', 'Recht'),
+        ('Medizin', 'Medizin'),
+        ('Erzwiss', 'Erzwiss'),
+        ('GeiWi', 'GeiWi'),
+        ('PB', 'Psychologie und Bewegungswissenschaften')
+    )
+    faculty = models.CharField(_('Faculty'), choices=FACULTIES, max_length=30)
+    image = models.ImageField(_('Image'), upload_to='supporters/', blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class SupporterPage(Page):
+    notable_supporters = models.ManyToManyField(NotableSupporter, blank=True)
