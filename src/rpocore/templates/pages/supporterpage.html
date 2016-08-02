@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags i18n %}
+
+{% block meta_title %}{{ page.meta_title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block main %}
+    <h4>{% trans 'Notable supporters' %}</h4>
+    {% for supporter in page.supporterpage.notable_supporters.all %}
+        <div class="panel panel-default supporterPanel">
+            <div class="panel-body">
+                <ul class="media-list">
+                    <li class="media">
+                        <div class="media-left">
+                            {% ifnotequal supporter.image '' %}
+                                <img class="media-object" src="{{ MEDIA_URL }}{{ supporter.image }}" alt="Image of {{ supporter.name }}" width="50">
+                            {% else %}
+                                {% trans 'No image available' %}
+                            {% endifnotequal %}
+                        </div>
+                        <div class="media-body">
+                            <div class="supporterLabel pull-left">{% trans 'Name' %}:</div><span class="supporterValue">{{ supporter.name }}</span><br />
+                            <div class="supporterLabel pull-left">{% trans 'Position' %}:</div><span class="supporterValue">{{ supporter.position }}</span><br />
+                            <div class="supporterLabel pull-left">{% trans 'Faculty' %}:</div><span class="supporterValue">{{ supporter.faculty }}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+
+    <h4>{% trans 'Supporter statistics' %}</h4>
+    {# expand with support statistics, variables will come from page processor #}
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <span class="statisticsLabel pull-left">{% trans 'Total amount of supporters' %}:</span><span class="statisticsValue">{{ all_count }}</span><br />
+            <span class="statisticsLabel pull-left">{% trans 'Amount of supporters from University of Hamburg' %}:</span><span class="statisticsValue">{{ uhh_count }}</span><br />
+            <span class="statisticsLabel pull-left">{% trans 'Amount of supporters from other universities' %}:</span><span class="statisticsValue">{{ other_count }}</span><br />
+            {% for group_data in data %}
+                <span class="statisticsLabel pull-left">{% trans 'Total amount of supporters of group' %} {{ group_data.0 }}:</span><span class="statisticsValue">{{ group_data.1 }}</span><br />
+            {% endfor %}
+        </div>
+    </div>
+
+    <h5>{% trans 'Supporters from University of Hamburg' %}</h5>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <span class="col-xs-3 col-xs-offset-9">{% trans 'Current stretch goal' %}</span>
+            </div>
+            {% for group_data in data %}
+                <div class="row">
+                    <span class="col-xs-2">{{ group_data.0 }}</span>
+                    <div class="col-xs-7 progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{{ group_data.2 }}" aria-valuemin="0"
+                             aria-valuemax="{{ group_data.4 }}" style="min-width: 2em; width: {{ group_data.5 }};">
+                            {{ group_data.5 }}
+                        </div>
+                    </div>
+                    <span class="col-xs-3">
+                        {{ group_data.4 }}
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h4>{% trans 'Support statements' %}</h4>
+    {# expand with support statements, variables will come from page processor #}
+    {% for supporter in supporters %}
+        <div class="supportStatement">
+            <q>
+                {{ supporter.statement }}
+            </q>
+            <div>
+                <strong>
+                {% if supporter.support_anonymous %}
+                    {% trans 'Anonymous supporter' %}
+                {% else %}
+                    {{ supporter.user.first_name }} {{ supporter.user.last_name }}
+                {% endif %}
+                </strong>
+                {% ifnotequal supporter.additional_information '' %}
+                    , <span>{{ supporter.additional_information }}</span>
+                {% endifnotequal %}
+                , <span>{{ supporter.get_university_display }}</span>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
