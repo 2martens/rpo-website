@@ -266,7 +266,7 @@ ADMIN_MENU_ORDER = (
     ('Content', ('pages.Page', 'blog.BlogPost', 'generic.ThreadedComment', ('Media Library', 'media-library'))),
     ('Site', ('sites.Site', 'redirects.Redirect', 'conf.Setting')),
     ('Users', ('auth.User', 'auth.Group')),
-    ('Campaign', ('rpocore.SupportGroup', 'rpocore.NotableSupporter'))
+    ('Campaign', ('rpocore.SupportGroup', 'rpocore.NotableSupporter', 'rpocore.Statement'))
 )
 
 ACCOUNTS_VERIFICATION_REQUIRED = True
