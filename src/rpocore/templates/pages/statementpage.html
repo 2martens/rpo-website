@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags i18n %}
+
+{% block meta_title %}{{ page.meta_title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="column-md-6">
+            {# formal statements #}
+
+            {% for statement in page.statementpage.formal_statements.all %}
+                <div>
+                    <strong>{{ statement.organization }}</strong>:
+                    {% ifnotequal statement.file '' %}
+                        <a href="{{ MEDIA_URL }}{{ statement.file }}"><span class="file-pdf-o"></span></a>
+                    {% else %}
+                        <span>{% trans 'Statement pending' %}</span>
+                    {% endifnotequal %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="column-md-6">
+            {# informal statements #}
+            {% for statement in page.statementpage.informal_statements.all %}
+                {% ifnotequal statement.file '' %}
+                    <div>
+                        <strong>{{ statement.organization }}</strong>:
+                        <a href="{{ MEDIA_URL }}{{ statement.file }}">
+                            <span class="file-pdf-o"></span>
+                        </a>
+                    </div>
+                {% endifnotequal %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}
