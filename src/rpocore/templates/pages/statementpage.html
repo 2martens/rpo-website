@@ -21,7 +21,13 @@
 
 {% block main %}
     <div class="row">
-        <div class="column-md-6">
+        <div class="col-xs-6">
+            <h4>{% trans 'Formal statements' %}</h4>
+            <div class="panel panel-info panel-default">
+                <div class="panel-body justify">
+                    {% trans 'These statements are required for the process to continue.' %}
+                </div>
+            </div>
             {# formal statements #}
 
             {% for statement in page.statementpage.formal_statements.all %}
@@ -35,7 +41,13 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="column-md-6">
+        <div class="col-xs-6">
+            <h4>{% trans 'Informal statements' %}</h4>
+            <div class="panel panel-info panel-default">
+                <div class="panel-body justify">
+                    {% trans 'These statements are not required for the process to continue but are interesting nonetheless.' %}
+                </div>
+            </div>
             {# informal statements #}
             {% for statement in page.statementpage.informal_statements.all %}
                 {% ifnotequal statement.file '' %}
@@ -47,6 +59,14 @@
                     </div>
                 {% endifnotequal %}
             {% endfor %}
+
+            <p>
+                {% blocktrans %}
+                Please understand that no statements from individuals can be shown here. If you are an organization
+                and want to submit your statement, go ahead.
+                {% endblocktrans %}
+            </p>
+            <a class="btn btn-primary" href="#">{% trans 'Submit statement' %}</a>
         </div>
     </div>
 
