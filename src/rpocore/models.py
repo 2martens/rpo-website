@@ -98,9 +98,6 @@ class Phase(models.Model):
     def __str__(self):
         return self.name
 
-    class Meta:
-        order_with_respect_to = 'process'
-
 
 class Process(models.Model):
     RESULTS = (
