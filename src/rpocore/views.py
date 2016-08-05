@@ -1,4 +1,5 @@
 from django.contrib.auth import (login as auth_login, authenticate)
+from django.contrib.auth.models import User, Group
 from django.contrib.messages import *
 from django.shortcuts import redirect
 from django.template.response import TemplateResponse
@@ -44,12 +45,15 @@ def signup_verify(request, uidb36=None, token=None):
     is set to ``True``. Activates the user, logs them in and redirects
     them to the get into action page.
     """
-    user = authenticate(uidb36=uidb36, token=token, is_active=False)
+    user = authenticate(uidb36=uidb36, token=token, is_active=False) # type: User
     if user is not None:
         become_active_url = getattr(
             settings, "BECOME_ACTIVE_URL", "/become-active/"
         )
         user.is_active = True
+        # add user to group Supporters
+        group = Group.objects.get(name='Supporters')
+        group.user_set.add(user)
         user.save()
         auth_login(request, user)
         success(request, _("Successfully supported the campaign"))
