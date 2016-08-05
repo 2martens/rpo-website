@@ -1,3 +1,4 @@
+from datetime import date
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from mezzanine.pages.models import Page
@@ -84,3 +85,24 @@ class InformalStatement(models.Model):
 class StatementPage(Page):
     formal_statements = models.ManyToManyField(FormalStatement, blank=True)
     informal_statements = models.ManyToManyField(InformalStatement, blank=True)
+
+
+class Phase(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.CharField(_('Description'), max_length=100)
+    start_date = models.DateField(default=date.today)
+    end_date = models.DateField(default=date.today)
+    process = models.ForeignKey(Process, on_delete=models.CASCADE)
+
+    class Meta:
+        order_with_respect_to = 'process'
+
+
+class Process(models.Model):
+    active_phase = models.ForeignKey(Phase, on_delete=models.SET_NULL, null=True)
+    RESULTS = (
+        'inprogress',
+        'success',
+        'failure'
+    )
+    result = models.CharField(_('Result'), choices=RESULTS, blank=True)
