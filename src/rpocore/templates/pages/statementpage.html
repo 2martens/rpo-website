@@ -34,7 +34,7 @@
                 <div>
                     <strong>{{ statement.organization }}</strong>:
                     {% ifnotequal statement.file '' %}
-                        <a href="{{ MEDIA_URL }}{{ statement.file }}"><span class="file-pdf-o"></span></a>
+                        <a href="{{ MEDIA_URL }}{{ statement.file }}"><span class="fa fa-file-pdf-o"></span></a>
                     {% else %}
                         <span>{% trans 'Statement pending' %}</span>
                     {% endifnotequal %}
@@ -54,7 +54,7 @@
                     <div>
                         <strong>{{ statement.organization }}</strong>:
                         <a href="{{ MEDIA_URL }}{{ statement.file }}">
-                            <span class="file-pdf-o"></span>
+                            <span class="fa fa-file-pdf-o"></span>
                         </a>
                     </div>
                 {% endifnotequal %}
