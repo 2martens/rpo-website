@@ -2,11 +2,14 @@ jQuery(function($) {
 
     if (typeof CodeMirror != 'undefined') {
 
-        var codeMirror = CodeMirror.fromTextArea(document.getElementById('id_content'), {
-            mode: 'htmlmixed',
-            lineNumbers: true,
-            theme: 'default'
-        });
+        var textareas = document.getElementsByClassName('codemirrorEditor');
+        for (let textarea of textareas)
+        {
+            var codeMirror = CodeMirror.fromTextArea(textarea, {
+                mode: 'htmlmixed',
+                lineNumbers: true,
+                theme: 'default'
+            });
+        }
     }
-
 });
