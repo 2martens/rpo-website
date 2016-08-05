@@ -95,6 +95,9 @@ class Phase(models.Model):
     process = models.ForeignKey('rpocore.Process', on_delete=models.CASCADE)
     active = models.BooleanField(_('Active'), default=False)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         order_with_respect_to = 'process'
 
