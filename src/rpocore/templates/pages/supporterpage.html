@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block main %}
-    <h4>{% trans 'Notable supporters' %}</h4>
+    <h4 id="notable_supporters">{% trans 'Notable supporters' %}</h4>
     {% for supporter in page.supporterpage.notable_supporters.all %}
         <div class="panel panel-default supporterPanel">
             <div class="panel-body">
@@ -44,7 +44,7 @@
         </div>
     {% endfor %}
 
-    <h4>{% trans 'Supporter statistics' %}</h4>
+    <h4 id="statistics">{% trans 'Supporter statistics' %}</h4>
     {# expand with support statistics, variables will come from page processor #}
 
     <div class="panel panel-default">
@@ -62,7 +62,8 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="row">
-                <span class="col-xs-3 col-xs-offset-9">{% trans 'Current stretch goal' %}</span>
+                <strong class="col-xs-2">{% trans 'Support group' %}</strong>
+                <strong class="col-xs-3 col-xs-offset-7">{% trans 'Current stretch goal' %}</strong>
             </div>
             {% for group_data in data %}
                 <div class="row">
@@ -81,7 +82,7 @@
         </div>
     </div>
 
-    <h4>{% trans 'Support statements' %}</h4>
+    <h4 id="statements">{% trans 'Support statements' %}</h4>
     {# expand with support statements, variables will come from page processor #}
     {% for supporter in supporters %}
         <div class="supportStatement">

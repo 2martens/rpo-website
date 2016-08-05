@@ -63,3 +63,24 @@ class NotableSupporter(models.Model):
 
 class SupporterPage(Page):
     notable_supporters = models.ManyToManyField(NotableSupporter, blank=True)
+
+
+class FormalStatement(models.Model):
+    organization = models.CharField(_('Organization'), max_length=30)
+    file = models.FileField(_('File'), help_text=_('Only PDF files allowed'), upload_to='statements', blank=True)
+
+    def __str__(self):
+        return self.organization
+
+
+class InformalStatement(models.Model):
+    organization = models.CharField(_('Organization'), max_length=30)
+    file = models.FileField(_('File'), help_text=_('Only PDF files allowed'), upload_to='statements')
+
+    def __str__(self):
+        return self.organization
+
+
+class StatementPage(Page):
+    formal_statements = models.ManyToManyField(FormalStatement, blank=True)
+    informal_statements = models.ManyToManyField(InformalStatement, blank=True)
