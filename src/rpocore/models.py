@@ -92,17 +92,17 @@ class Phase(models.Model):
     description = models.CharField(_('Description'), max_length=100)
     start_date = models.DateField(default=date.today)
     end_date = models.DateField(default=date.today)
-    process = models.ForeignKey(Process, on_delete=models.CASCADE)
+    process = models.ForeignKey('rpocore.Process', on_delete=models.CASCADE)
+    active = models.BooleanField(_('Active'), default=False)
 
     class Meta:
         order_with_respect_to = 'process'
 
 
 class Process(models.Model):
-    active_phase = models.ForeignKey(Phase, on_delete=models.SET_NULL, null=True)
     RESULTS = (
-        'inprogress',
-        'success',
-        'failure'
+        ('inprogress', 'Am Laufen'),
+        ('success', 'Erfolg'),
+        ('failure', 'Versagen'),
     )
-    result = models.CharField(_('Result'), choices=RESULTS, blank=True)
+    result = models.CharField(_('Result'), choices=RESULTS, blank=True, max_length=30)
