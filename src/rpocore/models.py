@@ -129,7 +129,7 @@ class HomepagePage(Page):
 
 
 class CarouselItem(models.Model):
-    homepage = models.ForeignKey(HomepagePage)
+    homepage = models.ForeignKey(HomepagePage, related_name='carousel_items')
     url = models.CharField(_('URL'), max_length=200)
     caption = models.CharField(_('Caption'), max_length=100)
     background_image = models.ImageField(
