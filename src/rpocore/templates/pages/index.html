@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+{% blocktrans %}
+    <h2>Congratulations!</h2>
+    <p>
+        Welcome to your new Mezzanine powered website.
+        Here are some quick links to get you started:
+    </p>
+    <ul>
+        <li><a href="/admin/">Log in to the admin interface</a></li>
+        <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
+        <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
+        <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
+        <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
+        <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
+        <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3">
+            <strong>next goal:</strong>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"><span class="pull-right">Studierende</span></div>
+        <div class="progress col-sm-6 ">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 80%;">
+                80%
+            </div>
+        </div>
+        <span class="col-sm-3">100</span>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"><span class="pull-right">Professor*innen</span></div>
+        <div class="progress col-sm-6 ">
+            <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10" style="min-width: 2em; width: 50%;">
+                50%
+            </div>
+        </div>
+        <span class="col-sm-3">10</span>
+    </div>
+{% endblocktrans %}
+{% endblock %}

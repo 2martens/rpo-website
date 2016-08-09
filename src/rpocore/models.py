@@ -1,6 +1,7 @@
 from datetime import date
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mezzanine.core.fields import RichTextField
 from mezzanine.pages.models import Page
 
 
@@ -106,3 +107,38 @@ class Process(models.Model):
         ('failure', 'Versagen'),
     )
     result = models.CharField(_('Result'), choices=RESULTS, blank=True, max_length=30)
+
+
+class HomepagePage(Page):
+    process = models.ForeignKey(Process, on_delete=models.SET_NULL, null=True)
+    campaign_positions = RichTextField(
+        _('Campaign positions block'),
+        blank=True,
+        help_text=_('Please enter the markup for this block.')
+    )
+    supporter_statistics = RichTextField(
+        _('Supporter statistics block'),
+        blank=True,
+        help_text=_('Please enter the markup for this block.')
+    )
+    get_active = RichTextField(
+        _('Get active block'),
+        blank=True,
+        help_text=_('Please enter the markup for this block.')
+    )
+
+
+class CarouselItem(models.Model):
+    homepage = models.ForeignKey(HomepagePage)
+    url = models.CharField(_('URL'), max_length=200)
+    caption = models.CharField(_('Caption'), max_length=100)
+    background_image = models.ImageField(
+        _('Background image'),
+        help_text=_("If you don't upload an image the background HTML will be used."),
+        blank=True
+    )
+    background_html = RichTextField(
+        _('Background HTML'),
+        help_text=_("This field will be used if you don't upload an image."),
+        blank=True
+    )
