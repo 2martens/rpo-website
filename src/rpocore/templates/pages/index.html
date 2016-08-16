@@ -16,9 +16,9 @@
 {% endmetablock %}{% endblock %}
 
 {% block main %}
-
+<main>
     {# carousel #}
-    <div id="carousel-showcase" class="carousel slide" data-ride="carousel">
+    <section id="carousel-showcase" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             {% for item in page.homepagepage.carousel_items.all %}
@@ -56,7 +56,7 @@
             <span class="sr-only">Next</span>
         </a>
         -->
-    </div>
+    </section>
 
     {# progress #}
     {% if page.homepagepage.process %}
@@ -83,18 +83,18 @@
     {% endif %}
 
     {# campaign positions #}
-    <div>
+    <section>
         {{ page.homepagepage.campaign_positions|richtext_filters|safe }}
-    </div>
+    </section>
 
     {# supporter statistics #}
-    <div>
+    <section>
         {{ page.homepagepage.supporter_statistics|richtext_filters|safe }}
-    </div>
+    </section>
 
     {# get active #}
-    <div>
+    <section>
         {{ page.homepagepage.get_active|richtext_filters|safe }}
-    </div>
-
+    </section>
+</main>
 {% endblock %}
