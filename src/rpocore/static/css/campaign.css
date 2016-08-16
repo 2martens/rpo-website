@@ -34,8 +34,15 @@
     display: inline-block;
     position: absolute;
 }
+.phase-intermediate {
+    margin-left: -10px;
+}
+
 .process-start {
     left: 1em;
+}
+.process-end {
+    background-color: #ecf0f1;
 }
 
 .progress {

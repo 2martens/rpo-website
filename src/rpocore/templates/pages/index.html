@@ -72,7 +72,7 @@
                     <div class="bg-success" style="width: {{ widthSuccessfulProgress }}; height: 10px; border-radius: 4px 0 0 4px;">
                         <div class="phase process-start bg-{% if process.result == 'failure' %}danger{% else %}success{% endif %}"></div>
                         {% for phaseObj in phases %}
-                            <div class="phase{% if phaseObj.phase.in_past %} bg-success{% elif phaseObj.phase.active %} bg-warning{% endif %}"
+                            <div class="phase phase-intermediate{% if phaseObj.phase.in_past %} bg-success{% elif phaseObj.phase.active %} bg-warning{% else %} process-end{% endif %}"
                                 style="{% if forloop.last %}right{% else %}left{% endif %}: {{ phaseObj.percentage }}"
                             ></div>
                         {% endfor %}
