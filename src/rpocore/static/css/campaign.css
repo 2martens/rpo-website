@@ -45,3 +45,7 @@
 .progress .progress-bar {
     border-radius: 4px;
 }
+
+.inline-stacked ._order {
+    display: block;
+}

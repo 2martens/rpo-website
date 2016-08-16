@@ -34,6 +34,11 @@ class SupporterPageAdmin(PageAdmin):
         NotableSupporterInline,
     ]
 
+    class Media:
+        css = {
+            "all": ("campaign.css",)
+        }
+
 admin.site.register(SupportGroup)
 admin.site.register(SupporterPage, SupporterPageAdmin)
 admin.site.register(NotableSupporter)

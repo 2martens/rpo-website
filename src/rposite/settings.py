@@ -239,6 +239,7 @@ if DJANGO_VERSION < (1, 9):
 
 INSTALLED_APPS = (
     "rpocore.apps.RpoCoreConfig",
+    "grappelli_safe",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -247,7 +248,6 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
-    "grappelli_safe",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
