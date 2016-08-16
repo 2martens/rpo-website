@@ -24,3 +24,24 @@
 .submit-row {
     z-index: 5;
 }
+
+.phase {
+    z-index: 1;
+	height: 20px;
+	width: 20px;
+	border-radius: 25px;
+    margin-top: -5px;
+    display: inline-block;
+    position: absolute;
+}
+.process-start {
+    left: 1em;
+}
+
+.progress {
+    overflow: visible;
+    margin-top: 10px;
+}
+.progress .progress-bar {
+    border-radius: 4px;
+}
