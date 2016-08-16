@@ -101,7 +101,7 @@ class Phase(models.Model):
 
     @property
     def in_past(self):
-        if self.start_date < date.today and self.end_date < date.today:
+        if self.start_date < date.today() and self.end_date < date.today():
             return True
         else:
             return False
