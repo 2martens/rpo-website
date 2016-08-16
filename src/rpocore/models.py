@@ -149,3 +149,6 @@ class CarouselItem(models.Model):
         help_text=_("This field will be used if you don't upload an image."),
         blank=True
     )
+
+    def __str__(self):
+        return self.caption
