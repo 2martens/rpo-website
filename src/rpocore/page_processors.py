@@ -53,6 +53,7 @@ def progress_data(request, page):
 
     for phase in phases_used:
         division = 1 if iterator == phase_count else iterator / phase_count
+        division = division - 0.01 if iterator == phase_successful_count else division
         current_percentage = "{:.0%}".format(division) if division != 1 else "1em"
         data = {
             'percentage': current_percentage,
