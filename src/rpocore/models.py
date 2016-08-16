@@ -1,6 +1,8 @@
 from datetime import date
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mezzanine.core.fields import RichTextField
+from mezzanine.core.models import Orderable
 from mezzanine.pages.models import Page
 
 
@@ -42,7 +44,8 @@ class Supporter(models.Model):
     university = models.CharField(_('University'), choices=UNIVERSITIES, max_length=30, null=True)
 
 
-class NotableSupporter(models.Model):
+class NotableSupporter(Orderable):
+    supporter_page = models.ForeignKey('rpocore.SupporterPage', related_name='notable_supporters', null=True)
     name = models.CharField(max_length=30)
     position = models.CharField(_('Position'), max_length=50)
     FACULTIES = (
@@ -63,7 +66,7 @@ class NotableSupporter(models.Model):
 
 
 class SupporterPage(Page):
-    notable_supporters = models.ManyToManyField(NotableSupporter, blank=True)
+    pass
 
 
 class FormalStatement(models.Model):
@@ -87,7 +90,7 @@ class StatementPage(Page):
     informal_statements = models.ManyToManyField(InformalStatement, blank=True)
 
 
-class Phase(models.Model):
+class Phase(Orderable):
     name = models.CharField(max_length=30)
     description = models.CharField(_('Description'), max_length=100)
     start_date = models.DateField(default=date.today)
@@ -98,6 +101,13 @@ class Phase(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def in_past(self):
+        if self.start_date < date.today() and self.end_date < date.today():
+            return True
+        else:
+            return False
+
 
 class Process(models.Model):
     RESULTS = (
@@ -106,3 +116,41 @@ class Process(models.Model):
         ('failure', 'Versagen'),
     )
     result = models.CharField(_('Result'), choices=RESULTS, blank=True, max_length=30)
+
+
+class HomepagePage(Page):
+    process = models.ForeignKey(Process, on_delete=models.SET_NULL, null=True)
+    campaign_positions = RichTextField(
+        _('Campaign positions block'),
+        blank=True,
+        help_text=_('Please enter the markup for this block.')
+    )
+    supporter_statistics = RichTextField(
+        _('Supporter statistics block'),
+        blank=True,
+        help_text=_('Please enter the markup for this block.')
+    )
+    get_active = RichTextField(
+        _('Get active block'),
+        blank=True,
+        help_text=_('Please enter the markup for this block.')
+    )
+
+
+class CarouselItem(Orderable):
+    homepage = models.ForeignKey(HomepagePage, related_name='carousel_items')
+    url = models.CharField(_('URL'), max_length=200)
+    caption = models.CharField(_('Caption'), max_length=100)
+    background_image = models.ImageField(
+        _('Background image'),
+        help_text=_("If you don't upload an image the background HTML will be used."),
+        blank=True
+    )
+    background_html = RichTextField(
+        _('Background HTML'),
+        help_text=_("This field will be used if you don't upload an image."),
+        blank=True
+    )
+
+    def __str__(self):
+        return self.caption

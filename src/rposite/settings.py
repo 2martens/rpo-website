@@ -239,6 +239,7 @@ if DJANGO_VERSION < (1, 9):
 
 INSTALLED_APPS = (
     "rpocore.apps.RpoCoreConfig",
+    "grappelli_safe",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -272,7 +273,8 @@ ADMIN_MENU_ORDER = (
         'rpocore.FormalStatement',
         'rpocore.InformalStatement',
         ('Processes', 'rpocore.Process'),
-        'rpocore.Phase'
+        'rpocore.Phase',
+        'rpocore.CarouselItem'
     ))
 )
 
