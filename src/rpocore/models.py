@@ -45,6 +45,7 @@ class Supporter(models.Model):
 
 
 class NotableSupporter(Orderable):
+    supporter_page = models.ForeignKey('rpocore.SupporterPage', related_name='notable_supporters', null=True)
     name = models.CharField(max_length=30)
     position = models.CharField(_('Position'), max_length=50)
     FACULTIES = (
@@ -65,7 +66,7 @@ class NotableSupporter(Orderable):
 
 
 class SupporterPage(Page):
-    notable_supporters = models.ManyToManyField(NotableSupporter, blank=True)
+    pass
 
 
 class FormalStatement(models.Model):

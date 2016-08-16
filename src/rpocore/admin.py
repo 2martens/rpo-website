@@ -24,8 +24,18 @@ class HomepagePageAdmin(PageAdmin):
         CarouselItemInline,
     ]
 
+
+class NotableSupporterInline(StackedDynamicInlineAdmin):
+    model = NotableSupporter
+
+
+class SupporterPageAdmin(PageAdmin):
+    inlines = [
+        NotableSupporterInline,
+    ]
+
 admin.site.register(SupportGroup)
-admin.site.register(SupporterPage, PageAdmin)
+admin.site.register(SupporterPage, SupporterPageAdmin)
 admin.site.register(NotableSupporter)
 admin.site.register(FormalStatement)
 admin.site.register(InformalStatement)
