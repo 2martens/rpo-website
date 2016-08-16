@@ -82,4 +82,19 @@
         </div>
     {% endif %}
 
+    {# campaign positions #}
+    <div>
+        {{ page.homepagepage.campaign_positions|richtext_filters|safe }}
+    </div>
+
+    {# supporter statistics #}
+    <div>
+        {{ page.homepagepage.supporter_statistics|richtext_filters|safe }}
+    </div>
+
+    {# get active #}
+    <div>
+        {{ page.homepagepage.get_active|richtext_filters|safe }}
+    </div>
+
 {% endblock %}
