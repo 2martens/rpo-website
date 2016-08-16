@@ -80,6 +80,17 @@
                 </div>
             </div>
         </div>
+        <section>
+            {% for phaseObj in phases %}
+                {% if phaseObj.phase.active %}
+                    <h4>{% trans 'Aktuelle Phase: ' %}{{ phaseObj.phase.name }}</h4>
+                    <span>{% trans 'Deadline: ' %}<time datetime="{{ phaseObj.phase.end_date.isoformat }}">{{ phaseObj.phase.end_date }}</time></span>
+                    <p>
+                        {{ phaseObj.phase.description }}
+                    </p>
+                {% endif %}
+            {% endfor %}
+        </section>
     {% endif %}
 
     {# campaign positions #}
