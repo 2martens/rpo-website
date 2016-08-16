@@ -49,3 +49,11 @@
 .inline-stacked ._order {
     display: block;
 }
+
+.carousel-inner .item {
+    height: 360px;
+}
+
+.carousel-inner .item .content {
+    height: 100%;
+}
