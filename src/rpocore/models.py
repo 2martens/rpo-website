@@ -2,6 +2,7 @@ from datetime import date
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from mezzanine.core.fields import RichTextField
+from mezzanine.core.models import Orderable
 from mezzanine.pages.models import Page
 
 
@@ -43,7 +44,7 @@ class Supporter(models.Model):
     university = models.CharField(_('University'), choices=UNIVERSITIES, max_length=30, null=True)
 
 
-class NotableSupporter(models.Model):
+class NotableSupporter(Orderable):
     name = models.CharField(max_length=30)
     position = models.CharField(_('Position'), max_length=50)
     FACULTIES = (
@@ -88,7 +89,7 @@ class StatementPage(Page):
     informal_statements = models.ManyToManyField(InformalStatement, blank=True)
 
 
-class Phase(models.Model):
+class Phase(Orderable):
     name = models.CharField(max_length=30)
     description = models.CharField(_('Description'), max_length=100)
     start_date = models.DateField(default=date.today)
@@ -135,7 +136,7 @@ class HomepagePage(Page):
     )
 
 
-class CarouselItem(models.Model):
+class CarouselItem(Orderable):
     homepage = models.ForeignKey(HomepagePage, related_name='carousel_items')
     url = models.CharField(_('URL'), max_length=200)
     caption = models.CharField(_('Caption'), max_length=100)

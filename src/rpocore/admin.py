@@ -1,10 +1,11 @@
 from django.contrib import admin
+from mezzanine.core.admin import TabularDynamicInlineAdmin, StackedDynamicInlineAdmin
 from mezzanine.pages.admin import PageAdmin
 
 from rpocore.models import *
 
 
-class PhaseInline(admin.TabularInline):
+class PhaseInline(TabularDynamicInlineAdmin):
     model = Phase
 
 
@@ -14,7 +15,7 @@ class ProcessAdmin(admin.ModelAdmin):
     ]
 
 
-class CarouselItemInline(admin.StackedInline):
+class CarouselItemInline(StackedDynamicInlineAdmin):
     model = CarouselItem
 
 
