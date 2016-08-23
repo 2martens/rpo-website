@@ -261,7 +261,6 @@ INSTALLED_APPS = (
     # "mezzanine.mobile",
 )
 
-AUTH_PROFILE_MODULE = "rpocore.Supporter"
 
 ADMIN_MENU_ORDER = (
     ('Content', ('pages.Page', 'blog.BlogPost', 'generic.ThreadedComment', ('Media Library', 'media-library'))),
@@ -278,6 +277,7 @@ ADMIN_MENU_ORDER = (
     ))
 )
 
+ACCOUNTS_PROFILE_MODEL = "rpocore.Supporter"
 ACCOUNTS_VERIFICATION_REQUIRED = True
 
 RICHTEXT_WIDGET_CLASS = 'rpocore.forms.CodemirrorWidget'
