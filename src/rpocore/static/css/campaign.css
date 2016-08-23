@@ -64,3 +64,7 @@
 .carousel-inner .item .content {
     height: 100%;
 }
+
+.middle img {
+    max-width: inherit;
+}
