@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-30 13:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: rpocore/models.py:11
+msgid "Total amount"
+msgstr "Gesamtanzahl"
+
+#: rpocore/models.py:12
+msgid "Stretch goals"
+msgstr "Stretch Goals"
+
+#: rpocore/models.py:21
+msgid "Support statement"
+msgstr "Unterstützungsstatement"
+
+#: rpocore/models.py:23
+msgid ""
+"This statement will appear on the list of supporters together with your name."
+msgstr "Dieses Statement wird zusammen mit deinem Namen auf der Seite der Unterstützer erscheinen."
+
+#: rpocore/models.py:27
+msgid "Support anonymously"
+msgstr "Anonym unterstützen"
+
+#: rpocore/models.py:28
+msgid "If checked your name will not appear on the list of supporters."
+msgstr "Wenn du dies ankreuzt, erscheint dein Name nicht auf der Seite der Unterstützer"
+
+#: rpocore/models.py:32
+msgid "Additional information"
+msgstr "Ergänzende Informationen"
+
+#: rpocore/models.py:35
+msgid ""
+"Here you can specify additional information about your activities, "
+"organizations, etc. It appears next to your name in the list of supporters."
+msgstr "Hier kannst du ergänzende Informationen u.a. über deine Aktivitäten "
+"und Organisationen angeben. Diese Angaben erscheinen neben deinem Namen auf"
+"der Seite der Unterstützer."
+
+#: rpocore/models.py:44
+msgid "University"
+msgstr "Universität"
+
+#: rpocore/models.py:50 rpocore/templates/pages/supporterpage.html:38
+msgid "Position"
+msgstr "Position"
+
+#: rpocore/models.py:61 rpocore/templates/pages/supporterpage.html:39
+msgid "Faculty"
+msgstr "Fakultät"
+
+#: rpocore/models.py:62
+msgid "Image"
+msgstr "Bild"
+
+#: rpocore/models.py:73 rpocore/models.py:81
+msgid "Organization"
+msgstr "Organisation"
+
+#: rpocore/models.py:74 rpocore/models.py:82
+msgid "File"
+msgstr "Datei"
+
+#: rpocore/models.py:74 rpocore/models.py:82
+msgid "Only PDF files allowed"
+msgstr "Nur PDF-Dateien sind erlaubt"
+
+#: rpocore/models.py:95
+msgid "Description"
+msgstr "Beschreibung"
+
+#: rpocore/models.py:99
+msgid "Active"
+msgstr "Aktiv"
+
+#: rpocore/models.py:118
+msgid "Result"
+msgstr "Ergebnis"
+
+#: rpocore/models.py:124
+msgid "Campaign positions block"
+msgstr "Abschnitt über Kampagnen-Positionen"
+
+#: rpocore/models.py:126 rpocore/models.py:131 rpocore/models.py:136
+msgid "Please enter the markup for this block."
+msgstr "Bitte das Markup für den Abschnitt angeben"
+
+#: rpocore/models.py:129
+msgid "Supporter statistics block"
+msgstr "Abschnitt für Unterstützerstatistiken"
+
+#: rpocore/models.py:134
+msgid "Get active block"
+msgstr "'Werde aktiv'-Abschnitt"
+
+#: rpocore/models.py:142
+msgid "URL"
+msgstr "URL"
+
+#: rpocore/models.py:143
+msgid "Caption"
+msgstr "Überschrift"
+
+#: rpocore/models.py:145
+msgid "Background image"
+msgstr "Hintergrundbild"
+
+#: rpocore/models.py:146
+msgid "If you don't upload an image the background HTML will be used."
+msgstr "Wenn du kein Bild hochlädst, wird das Hintergrund-HTML benutzt."
+
+#: rpocore/models.py:150
+msgid "Background HTML"
+msgstr "Hintergrund HTML"
+
+#: rpocore/models.py:151
+msgid "This field will be used if you don't upload an image."
+msgstr "Dieses Feld wird benutzt, wenn du kein Bild hochlädst."
+
+#: rpocore/templates/accounts/account_login.html:9
+msgid "You're already logged in."
+msgstr "Du bist bereits eingeloggt."
+
+#: rpocore/templates/accounts/account_login.html:15
+msgid "This is the log in page for everyone who supported this campaign."
+msgstr "Dies ist die LogIn-Seite für alle, die die Kampagne unterstützen."
+
+#: rpocore/templates/accounts/account_login.html:20
+#, python-format
+msgid ""
+"If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
+"\">sign up</a> for one now."
+msgstr ""
+"Wenn du kein Account hast, kannst du einen <a href=\"%(signup_url)s?next=%(next)s"
+"\">registrieren</a>."
+
+#: rpocore/templates/accounts/account_login.html:23
+#, python-format
+msgid ""
+"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
+"\">reset your password</a> if you've forgotten it.</p>"
+msgstr ""
+
+#: rpocore/templates/accounts/account_signup.html:7
+msgid "You already support the RPO 2016 campaign."
+msgstr "Du unterstützt die RPO 2016 Kampagne bereits."
+
+#: rpocore/templates/accounts/account_signup.html:12
+msgid ""
+"\n"
+"                    Welcome on the support site. The information you enter "
+"here is largely used to showcase your support on the\n"
+"                    list of supporters. The email is required to verify your "
+"support. We encourage you to use a university provided\n"
+"                    email account to reduce fraud as much as possible.\n"
+"                "
+msgstr ""
+"\n"
+"                   Willkommen auf der Unterstützungsseite. Die hier eingegebenen"
+"Informationen werden hauptsächlich genutzt, um deine Unterstützung auf der\n"
+"                   Liste der Unterstützer*Innen anzuzeigen. Die Email wird benötigt, "
+"um deine Unterstützung zu verifizieren. Wir möchten dich bitten eine von der Uni\n"
+"                   bereitgestellte E-Mail-Adresse zu nutzen, um Missbrauch so gut es geht"
+" zu reduzieren."
+
+#: rpocore/templates/accounts/account_signup.html:19
+msgid ""
+"\n"
+"                    The username and password will be required to log in. "
+"However\n"
+"                    after supporting the only difference is that you can "
+"edit your profile and with it the information you provided\n"
+"                    related to your support. So you can first support it "
+"anonymously and then later decide to support it with your\n"
+"                    name.\n"
+"                "
+msgstr ""
+"\n"
+"                   Der Benutzername und das Passwort werden für den Login benötigt. "
+"Allerdings\n"
+"                   kannst du nach der Unterstützung lediglich dein Profil editieren und damit "
+"verbunden die zur Unterstützung bereitgestellten Informationen.\n"
+"                   Beispielsweise kannst du zunächst anonym unterstützen und "
+"später entscheiden auch mit deinem Namen zu unterstützen."
+
+
+#: rpocore/templates/accounts/account_signup.html:27
+msgid ""
+"\n"
+"                    We're glad to have you on our side!\n"
+"                "
+msgstr ""
+"\n"
+"                    Wir sind froh, dich auf unserer Seite zu haben!\n"
+"                "
+
+#: rpocore/templates/accounts/account_signup.html:41
+msgid ""
+"After supporting the campaign, your support pledge will be reviewed for "
+"approval. You'll receive an email when your support counts."
+msgstr ""
+"Nach der Unterstützung der Kampagne wird deine Unterstützungsabsicht "
+"überprüft werden. Du erhältst eine E-Mail, wenn deine Unterstützung zählt."
+
+#: rpocore/templates/accounts/account_signup.html:44
+msgid ""
+"After supporting the campaign, you'll receive an email with a link you need "
+"to click, in order for the support to count."
+msgstr ""
+"Nach der Unterstützung der Kampagne wirst du eine E-Mail mit einem Link erhalten, "
+"den du aufrufen musst, damit deine Unterstützung zählt."
+
+#: rpocore/templates/accounts/includes/user_panel.html:5
+msgid "Logged in as: "
+msgstr "Eingeloggt als: "
+
+#: rpocore/templates/accounts/includes/user_panel.html:11
+msgid "Update profile"
+msgstr "Profil bearbeiten"
+
+#: rpocore/templates/accounts/includes/user_panel.html:17
+msgid "Log out"
+msgstr "Ausloggen"
+
+#: rpocore/templates/accounts/includes/user_panel.html:20
+msgid "Log in"
+msgstr "Einloggen"
+
+#: rpocore/templates/accounts/includes/user_panel.html:21
+msgid "or"
+msgstr "oder"
+
+#: rpocore/templates/accounts/includes/user_panel.html:23
+msgid "Sign up"
+msgstr "Unterstützen"
+
+#: rpocore/templates/admin/base_site.html:20
+msgid "View site"
+msgstr "Seite ansehen"
+
+#: rpocore/templates/base.html:57
+msgid "Toggle Navigation"
+msgstr "Navigation an/ausschalten"
+
+#: rpocore/templates/base.html:131
+msgid "Powered by"
+msgstr "Powered by"
+
+#: rpocore/templates/base.html:134
+msgid "and"
+msgstr "und"
+
+#: rpocore/templates/base.html:137
+msgid "Theme by"
+msgstr "Theme by"
+
+#: rpocore/templates/base.html:140
+msgid "View Mobile Site"
+msgstr "Mobile Seite ansehen"
+
+#: rpocore/templates/pages/index.html:86
+msgid "Aktuelle Phase: "
+msgstr "Aktuelle Phase: "
+
+#: rpocore/templates/pages/index.html:87
+msgid "Deadline: "
+msgstr "Deadline: "
+
+#: rpocore/templates/pages/statementpage.html:25
+msgid "Formal statements"
+msgstr "Offizielle Statements"
+
+#: rpocore/templates/pages/statementpage.html:28
+msgid "These statements are required for the process to continue."
+msgstr "Diese Statements werden benötigt, damit der Prozess fortgesetzt werden kann."
+
+#: rpocore/templates/pages/statementpage.html:39
+msgid "Statement pending"
+msgstr "Ausstehendes Statement"
+
+#: rpocore/templates/pages/statementpage.html:45
+msgid "Informal statements"
+msgstr "Inoffizielle Statements"
+
+#: rpocore/templates/pages/statementpage.html:48
+msgid ""
+"These statements are not required for the process to continue but are "
+"interesting nonetheless."
+msgstr ""
+"Diese Statements werden nicht für den Fortgang des Prozesses benötigt, sind "
+"jedoch in jedem Fall interessant."
+
+#: rpocore/templates/pages/statementpage.html:64
+msgid ""
+"\n"
+"                Please understand that no statements from individuals can be "
+"shown here. If you are an organization\n"
+"                and want to submit your statement, go ahead.\n"
+"                "
+msgstr ""
+"\n"
+"               Bitte verstehe, dass keine Statements von Einzelpersonen hier "
+"angezeigt werden können. Wenn du eine Organisation vertrittst\n"
+"               und deren Statement einreichen möchtest, fahre fort.\n"
+"               "
+
+#: rpocore/templates/pages/statementpage.html:69
+msgid "Submit statement"
+msgstr "Statement einreichen"
+
+#: rpocore/templates/pages/supporterpage.html:23
+msgid "Notable supporters"
+msgstr "Nennenswerte Unterstützer"
+
+#: rpocore/templates/pages/supporterpage.html:33
+msgid "No image available"
+msgstr "Kein Bild verfügbar"
+
+#: rpocore/templates/pages/supporterpage.html:37
+msgid "Name"
+msgstr "Name"
+
+#: rpocore/templates/pages/supporterpage.html:47
+msgid "Supporter statistics"
+msgstr "Unterstützungsstatistiken"
+
+#: rpocore/templates/pages/supporterpage.html:52
+msgid "Total amount of supporters"
+msgstr "Gesamtanzahl von Unterstützer*Innen"
+
+#: rpocore/templates/pages/supporterpage.html:53
+msgid "Amount of supporters from University of Hamburg"
+msgstr "Anzahl von Unterstützer*Innen von der Uni Hamburg"
+
+#: rpocore/templates/pages/supporterpage.html:54
+msgid "Amount of supporters from other universities"
+msgstr "Anzahl von Unterstützer*Innen anderer Unis"
+
+#: rpocore/templates/pages/supporterpage.html:56
+msgid "Total amount of supporters of group"
+msgstr "Gesamtanzahl an Unterstützer*Innen von der Gruppe"
+
+#: rpocore/templates/pages/supporterpage.html:61
+msgid "Supporters from University of Hamburg"
+msgstr "Unterstützer*Innen von der Uni Hamburg"
+
+#: rpocore/templates/pages/supporterpage.html:65
+msgid "Support group"
+msgstr "Statusgruppe"
+
+#: rpocore/templates/pages/supporterpage.html:66
+msgid "Current stretch goal"
+msgstr "Aktuelles Stretch Goal"
+
+#: rpocore/templates/pages/supporterpage.html:85
+msgid "Support statements"
+msgstr "Unterstützungsstatements"
+
+#: rpocore/templates/pages/supporterpage.html:95
+msgid "Anonymous supporter"
+msgstr "Unterstützt anonym"
+
+#: rpocore/views.py:25
+msgid ""
+"Thanks for supporting this campaign! You'll receive an email when your "
+"support is counted."
+msgstr ""
+"Danke für die Unterstützung dieser Kampagne. Du erhältst eine E-Mail, wenn "
+"deine Unterstützung gezählt wird."
+
+#: rpocore/views.py:29
+msgid "A verification email has been sent with a link to verify your support."
+msgstr "Eine Verifikations-E-Mail wurde mit einem Link an dich gesendet, um die Unterstützung zu verifizieren."
+
+#: rpocore/views.py:33 rpocore/views.py:59
+msgid "Successfully supported the campaign"
+msgstr "Erfolgreich die Kampagne unterstützt"
+
+#: rpocore/views.py:36
+msgid "Support RPO 2016"
+msgstr "Unterstütze RPO 2016"
+
+#: rpocore/views.py:62
+msgid "The link you clicked is no longer valid."
+msgstr "Der von dir angeklickte Link ist nicht länger gültig."
+
+#: rposite/settings.py:115
+msgid "English"
+msgstr "Englisch"
+
+#: rposite/settings.py:116
+msgid "German"
+msgstr "Deutsch"
