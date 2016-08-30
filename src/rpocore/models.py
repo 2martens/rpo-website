@@ -1,4 +1,6 @@
 from datetime import date
+
+from django.core.validators import validate_comma_separated_integer_list
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from mezzanine.core.fields import RichTextField
@@ -9,7 +11,11 @@ from mezzanine.pages.models import Page
 class SupportGroup(models.Model):
     name = models.CharField(max_length=30, unique=True)
     total_amount = models.IntegerField(_('Total amount'))
-    stretch_goals = models.CommaSeparatedIntegerField(_('Stretch goals'), max_length=255)
+    stretch_goals = models.CharField(
+        _('Stretch goals'),
+        max_length=255,
+        validators=[validate_comma_separated_integer_list]
+    )
 
     def __str__(self):
         return self.name
