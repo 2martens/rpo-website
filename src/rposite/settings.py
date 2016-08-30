@@ -292,6 +292,7 @@ MIDDLEWARE_CLASSES = (
     # Uncomment if using internationalisation or localisation
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -314,6 +315,11 @@ MIDDLEWARE_CLASSES = (
 # at the moment we are using custom forks of them.
 PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
 PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
+
+### SECURITY OPTIONS
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'Deny'
 
 #########################
 # OPTIONAL APPLICATIONS #
