@@ -356,7 +356,7 @@ msgstr "Anzahl von Unterstützer*Innen anderer Unis"
 
 #: rpocore/templates/pages/supporterpage.html:56
 msgid "Total amount of supporters of group"
-msgstr "Gesamtanzahl an Unterstützer*Innen von der Gruppe"
+msgstr "Gesamtanzahl von der Gruppe"
 
 #: rpocore/templates/pages/supporterpage.html:61
 msgid "Supporters from University of Hamburg"
