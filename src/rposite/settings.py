@@ -108,7 +108,7 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "de"
 
 # Supported languages
 LANGUAGES = (
@@ -320,6 +320,9 @@ PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
 CSRF_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'Deny'
+
+### DEPLOY OPTIONS
+USE_X_FORWARDED_HOST = True
 
 #########################
 # OPTIONAL APPLICATIONS #
