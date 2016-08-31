@@ -31,8 +31,6 @@ msgid "Support group"
 msgstr "Statusgruppe"
 
 #: rpocore/models.py:25
-#, fuzzy
-#| msgid "Support group"
 msgid "Support groups"
 msgstr "Statusgruppen"
 
@@ -75,14 +73,10 @@ msgid "University"
 msgstr "Universität"
 
 #: rpocore/models.py:57
-#, fuzzy
-#| msgid "Support group"
 msgid "Supporter"
 msgstr "Unterstützer*In"
 
 #: rpocore/models.py:58
-#, fuzzy
-#| msgid "Support group"
 msgid "Supporters"
 msgstr "Unterstützer*Innen"
 
@@ -99,8 +93,6 @@ msgid "Image"
 msgstr "Bild"
 
 #: rpocore/models.py:82
-#, fuzzy
-#| msgid "Notable supporters"
 msgid "Notable supporter"
 msgstr "Nennenswerte Unterstützer*In"
 
@@ -109,16 +101,12 @@ msgid "Notable supporters"
 msgstr "Nennenswerte Unterstützer*Innen"
 
 #: rpocore/models.py:88
-#, fuzzy
-#| msgid "Support group"
 msgid "Supporter page"
-msgstr "Statusgruppe"
+msgstr "Unterstützer*Innen-Seite"
 
 #: rpocore/models.py:89
-#, fuzzy
-#| msgid "Supporter statistics"
 msgid "Supporter pages"
-msgstr "Unterstützungsstatistiken"
+msgstr "Unterstützer*Innen-Seiten"
 
 #: rpocore/models.py:93 rpocore/models.py:105
 msgid "Organization"
@@ -133,8 +121,6 @@ msgid "Only PDF files allowed"
 msgstr "Nur PDF-Dateien sind erlaubt"
 
 #: rpocore/models.py:100
-#, fuzzy
-#| msgid "Formal statements"
 msgid "Formal statement"
 msgstr "Offizielle Stellungnahme"
 
@@ -143,8 +129,6 @@ msgid "Formal statements"
 msgstr "Offizielle Stellungnahmen"
 
 #: rpocore/models.py:112
-#, fuzzy
-#| msgid "Informal statements"
 msgid "Informal statement"
 msgstr "Inoffizielle Stellungnahme"
 
@@ -153,14 +137,10 @@ msgid "Informal statements"
 msgstr "Inoffizielle Stellungnahmen"
 
 #: rpocore/models.py:121
-#, fuzzy
-#| msgid "Statement pending"
 msgid "Statement page"
 msgstr "Stellungnahmen-Seite"
 
 #: rpocore/models.py:122
-#, fuzzy
-#| msgid "Statement pending"
 msgid "Statement pages"
 msgstr "Stellungnahmen-Seiten"
 
