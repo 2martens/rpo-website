@@ -19,6 +19,10 @@ class SupportGroup(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = _('Support group')
+        verbose_name_plural = _('Support groups')
 
 
 class Supporter(models.Model):
@@ -48,6 +52,10 @@ class Supporter(models.Model):
         ('Other', 'Andere Universität oder Hochschule')
     )
     university = models.CharField(_('University'), choices=UNIVERSITIES, max_length=30, null=True)
+    
+    class Meta:
+        verbose_name = _('Supporter')
+        verbose_name_plural = _('Supporters')
 
 
 class NotableSupporter(Orderable):
@@ -69,10 +77,16 @@ class NotableSupporter(Orderable):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = _('Notable supporter')
+        verbose_name_plural = _('Notable supporters')
 
 
 class SupporterPage(Page):
-    pass
+    class Meta:
+        verbose_name = _('Supporter page')
+        verbose_name_plural = _('Supporter pages')
 
 
 class FormalStatement(models.Model):
@@ -81,6 +95,10 @@ class FormalStatement(models.Model):
 
     def __str__(self):
         return self.organization
+    
+    class Meta:
+        verbose_name = _('Formal statement')
+        verbose_name_plural = _('Formal statements')
 
 
 class InformalStatement(models.Model):
@@ -89,11 +107,19 @@ class InformalStatement(models.Model):
 
     def __str__(self):
         return self.organization
+    
+    class Meta:
+        verbose_name = _('Informal statement')
+        verbose_name_plural = _('Informal statements')
 
 
 class StatementPage(Page):
     formal_statements = models.ManyToManyField(FormalStatement, blank=True)
     informal_statements = models.ManyToManyField(InformalStatement, blank=True)
+    
+    class Meta:
+        verbose_name = _('Statement page')
+        verbose_name_plural = _('Statement pages')
 
 
 class Phase(Orderable):
@@ -103,6 +129,10 @@ class Phase(Orderable):
     end_date = models.DateField(default=date.today)
     process = models.ForeignKey('rpocore.Process', on_delete=models.CASCADE)
     active = models.BooleanField(_('Active'), default=False)
+    
+    class Meta:
+        verbose_name = _('Phase')
+        verbose_name_plural = _('Phases')
 
     def __str__(self):
         return self.name
@@ -122,6 +152,10 @@ class Process(models.Model):
         ('failure', 'Versagen'),
     )
     result = models.CharField(_('Result'), choices=RESULTS, blank=True, max_length=30)
+    
+    class Meta:
+        verbose_name = _('Process')
+        verbose_name_plural = _('Processes')
 
 
 class HomepagePage(Page):
@@ -141,6 +175,10 @@ class HomepagePage(Page):
         blank=True,
         help_text=_('Please enter the markup for this block.')
     )
+    
+    class Meta:
+        verbose_name = _('Homepage page')
+        verbose_name_plural = _('Homepage pages')
 
 
 class CarouselItem(Orderable):
@@ -160,3 +198,7 @@ class CarouselItem(Orderable):
 
     def __str__(self):
         return self.caption
+    
+    class Meta:
+        verbose_name = _('Carousel item')
+        verbose_name_plural = _('Carousel items')

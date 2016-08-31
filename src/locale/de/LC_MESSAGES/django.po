@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 13:46+0200\n"
+"POT-Creation-Date: 2016-08-31 10:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,122 +18,235 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: rpocore/models.py:11
+#: rpocore/models.py:13
 msgid "Total amount"
 msgstr "Gesamtanzahl"
 
-#: rpocore/models.py:12
+#: rpocore/models.py:15
 msgid "Stretch goals"
-msgstr "Stretch Goals"
+msgstr "Ziele"
 
-#: rpocore/models.py:21
+#: rpocore/models.py:24 rpocore/templates/pages/supporterpage.html:65
+msgid "Support group"
+msgstr "Statusgruppe"
+
+#: rpocore/models.py:25
+#, fuzzy
+#| msgid "Support group"
+msgid "Support groups"
+msgstr "Statusgruppen"
+
+#: rpocore/models.py:31
 msgid "Support statement"
 msgstr "Unterstützungsstatement"
 
-#: rpocore/models.py:23
+#: rpocore/models.py:33
 msgid ""
 "This statement will appear on the list of supporters together with your name."
-msgstr "Dieses Statement wird zusammen mit deinem Namen auf der Seite der Unterstützer erscheinen."
+msgstr ""
+"Dieses Statement wird zusammen mit deinem Namen auf der Seite der "
+"Unterstützer erscheinen."
 
-#: rpocore/models.py:27
+#: rpocore/models.py:37
 msgid "Support anonymously"
 msgstr "Anonym unterstützen"
 
-#: rpocore/models.py:28
+#: rpocore/models.py:38
 msgid "If checked your name will not appear on the list of supporters."
-msgstr "Wenn du dies ankreuzt, erscheint dein Name nicht auf der Seite der Unterstützer"
+msgstr ""
+"Wenn du dies ankreuzt, erscheint dein Name nicht auf der Seite der "
+"Unterstützer"
 
-#: rpocore/models.py:32
+#: rpocore/models.py:42
 msgid "Additional information"
 msgstr "Ergänzende Informationen"
 
-#: rpocore/models.py:35
+#: rpocore/models.py:45
 msgid ""
 "Here you can specify additional information about your activities, "
 "organizations, etc. It appears next to your name in the list of supporters."
-msgstr "Hier kannst du ergänzende Informationen u.a. über deine Aktivitäten "
-"und Organisationen angeben. Diese Angaben erscheinen neben deinem Namen auf"
-"der Seite der Unterstützer."
+msgstr ""
+"Hier kannst du ergänzende Informationen u.a. über deine Aktivitäten und "
+"Organisationen angeben. Diese Angaben erscheinen neben deinem Namen auf der "
+"Seite der Unterstützer*Innen."
 
-#: rpocore/models.py:44
+#: rpocore/models.py:54
 msgid "University"
 msgstr "Universität"
 
-#: rpocore/models.py:50 rpocore/templates/pages/supporterpage.html:38
+#: rpocore/models.py:57
+#, fuzzy
+#| msgid "Support group"
+msgid "Supporter"
+msgstr "Unterstützer*In"
+
+#: rpocore/models.py:58
+#, fuzzy
+#| msgid "Support group"
+msgid "Supporters"
+msgstr "Unterstützer*Innen"
+
+#: rpocore/models.py:64 rpocore/templates/pages/supporterpage.html:38
 msgid "Position"
 msgstr "Position"
 
-#: rpocore/models.py:61 rpocore/templates/pages/supporterpage.html:39
+#: rpocore/models.py:75 rpocore/templates/pages/supporterpage.html:39
 msgid "Faculty"
 msgstr "Fakultät"
 
-#: rpocore/models.py:62
+#: rpocore/models.py:76
 msgid "Image"
 msgstr "Bild"
 
-#: rpocore/models.py:73 rpocore/models.py:81
+#: rpocore/models.py:82
+#, fuzzy
+#| msgid "Notable supporters"
+msgid "Notable supporter"
+msgstr "Nennenswerte Unterstützer*In"
+
+#: rpocore/models.py:83 rpocore/templates/pages/supporterpage.html:23
+msgid "Notable supporters"
+msgstr "Nennenswerte Unterstützer*Innen"
+
+#: rpocore/models.py:88
+#, fuzzy
+#| msgid "Support group"
+msgid "Supporter page"
+msgstr "Statusgruppe"
+
+#: rpocore/models.py:89
+#, fuzzy
+#| msgid "Supporter statistics"
+msgid "Supporter pages"
+msgstr "Unterstützungsstatistiken"
+
+#: rpocore/models.py:93 rpocore/models.py:105
 msgid "Organization"
 msgstr "Organisation"
 
-#: rpocore/models.py:74 rpocore/models.py:82
+#: rpocore/models.py:94 rpocore/models.py:106
 msgid "File"
 msgstr "Datei"
 
-#: rpocore/models.py:74 rpocore/models.py:82
+#: rpocore/models.py:94 rpocore/models.py:106
 msgid "Only PDF files allowed"
 msgstr "Nur PDF-Dateien sind erlaubt"
 
-#: rpocore/models.py:95
+#: rpocore/models.py:100
+#, fuzzy
+#| msgid "Formal statements"
+msgid "Formal statement"
+msgstr "Offizielle Stellungnahme"
+
+#: rpocore/models.py:101 rpocore/templates/pages/statementpage.html:25
+msgid "Formal statements"
+msgstr "Offizielle Stellungnahmen"
+
+#: rpocore/models.py:112
+#, fuzzy
+#| msgid "Informal statements"
+msgid "Informal statement"
+msgstr "Inoffizielle Stellungnahme"
+
+#: rpocore/models.py:113 rpocore/templates/pages/statementpage.html:45
+msgid "Informal statements"
+msgstr "Inoffizielle Stellungnahmen"
+
+#: rpocore/models.py:121
+#, fuzzy
+#| msgid "Statement pending"
+msgid "Statement page"
+msgstr "Stellungnahmen-Seite"
+
+#: rpocore/models.py:122
+#, fuzzy
+#| msgid "Statement pending"
+msgid "Statement pages"
+msgstr "Stellungnahmen-Seiten"
+
+#: rpocore/models.py:127
 msgid "Description"
 msgstr "Beschreibung"
 
-#: rpocore/models.py:99
+#: rpocore/models.py:131
 msgid "Active"
 msgstr "Aktiv"
 
-#: rpocore/models.py:118
+#: rpocore/models.py:134
+msgid "Phase"
+msgstr "Phase"
+
+#: rpocore/models.py:135
+msgid "Phases"
+msgstr "Phasen"
+
+#: rpocore/models.py:154
 msgid "Result"
 msgstr "Ergebnis"
 
-#: rpocore/models.py:124
+#: rpocore/models.py:157
+msgid "Process"
+msgstr "Prozess"
+
+#: rpocore/models.py:158
+msgid "Processes"
+msgstr "Prozesse"
+
+#: rpocore/models.py:164
 msgid "Campaign positions block"
 msgstr "Abschnitt über Kampagnen-Positionen"
 
-#: rpocore/models.py:126 rpocore/models.py:131 rpocore/models.py:136
+#: rpocore/models.py:166 rpocore/models.py:171 rpocore/models.py:176
 msgid "Please enter the markup for this block."
 msgstr "Bitte das Markup für den Abschnitt angeben"
 
-#: rpocore/models.py:129
+#: rpocore/models.py:169
 msgid "Supporter statistics block"
 msgstr "Abschnitt für Unterstützerstatistiken"
 
-#: rpocore/models.py:134
+#: rpocore/models.py:174
 msgid "Get active block"
 msgstr "'Werde aktiv'-Abschnitt"
 
-#: rpocore/models.py:142
+#: rpocore/models.py:180
+msgid "Homepage page"
+msgstr "Homepage-Seite"
+
+#: rpocore/models.py:181
+msgid "Homepage pages"
+msgstr "Homepage-Seiten"
+
+#: rpocore/models.py:186
 msgid "URL"
 msgstr "URL"
 
-#: rpocore/models.py:143
+#: rpocore/models.py:187
 msgid "Caption"
 msgstr "Überschrift"
 
-#: rpocore/models.py:145
+#: rpocore/models.py:189
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: rpocore/models.py:146
+#: rpocore/models.py:190
 msgid "If you don't upload an image the background HTML will be used."
 msgstr "Wenn du kein Bild hochlädst, wird das Hintergrund-HTML benutzt."
 
-#: rpocore/models.py:150
+#: rpocore/models.py:194
 msgid "Background HTML"
 msgstr "Hintergrund HTML"
 
-#: rpocore/models.py:151
+#: rpocore/models.py:195
 msgid "This field will be used if you don't upload an image."
 msgstr "Dieses Feld wird benutzt, wenn du kein Bild hochlädst."
+
+#: rpocore/models.py:203
+msgid "Carousel item"
+msgstr "Slideshow Element"
+
+#: rpocore/models.py:204
+msgid "Carousel items"
+msgstr "Slideshow Elemente"
 
 #: rpocore/templates/accounts/account_login.html:9
 msgid "You're already logged in."
@@ -149,8 +262,8 @@ msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
 msgstr ""
-"Wenn du kein Account hast, kannst du einen <a href=\"%(signup_url)s?next=%(next)s"
-"\">registrieren</a>."
+"Wenn du kein Account hast, kannst du einen <a href=\"%(signup_url)s?next="
+"%(next)s\">registrieren</a>."
 
 #: rpocore/templates/accounts/account_login.html:23
 #, python-format
@@ -174,12 +287,14 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                   Willkommen auf der Unterstützungsseite. Die hier eingegebenen"
-"Informationen werden hauptsächlich genutzt, um deine Unterstützung auf der\n"
-"                   Liste der Unterstützer*Innen anzuzeigen. Die Email wird benötigt, "
-"um deine Unterstützung zu verifizieren. Wir möchten dich bitten eine von der Uni\n"
-"                   bereitgestellte E-Mail-Adresse zu nutzen, um Missbrauch so gut es geht"
-" zu reduzieren."
+"                   Willkommen auf der Unterstützungsseite. Die hier "
+"eingegebenenInformationen werden hauptsächlich genutzt, um deine "
+"Unterstützung auf der\n"
+"                   Liste der Unterstützer*Innen anzuzeigen. Die Email wird "
+"benötigt, um deine Unterstützung zu verifizieren. Wir möchten dich bitten "
+"eine von der Uni\n"
+"                   bereitgestellte E-Mail-Adresse zu nutzen, um Missbrauch "
+"so gut es geht zu reduzieren."
 
 #: rpocore/templates/accounts/account_signup.html:19
 msgid ""
@@ -194,13 +309,13 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                   Der Benutzername und das Passwort werden für den Login benötigt. "
-"Allerdings\n"
-"                   kannst du nach der Unterstützung lediglich dein Profil editieren und damit "
-"verbunden die zur Unterstützung bereitgestellten Informationen.\n"
+"                   Der Benutzername und das Passwort werden für den Login "
+"benötigt. Allerdings\n"
+"                   kannst du nach der Unterstützung lediglich dein Profil "
+"editieren und damit verbunden die zur Unterstützung bereitgestellten "
+"Informationen.\n"
 "                   Beispielsweise kannst du zunächst anonym unterstützen und "
 "später entscheiden auch mit deinem Namen zu unterstützen."
-
 
 #: rpocore/templates/accounts/account_signup.html:27
 msgid ""
@@ -225,8 +340,8 @@ msgid ""
 "After supporting the campaign, you'll receive an email with a link you need "
 "to click, in order for the support to count."
 msgstr ""
-"Nach der Unterstützung der Kampagne wirst du eine E-Mail mit einem Link erhalten, "
-"den du aufrufen musst, damit deine Unterstützung zählt."
+"Nach der Unterstützung der Kampagne wirst du eine E-Mail mit einem Link "
+"erhalten, den du aufrufen musst, damit deine Unterstützung zählt."
 
 #: rpocore/templates/accounts/includes/user_panel.html:5
 msgid "Logged in as: "
@@ -284,28 +399,21 @@ msgstr "Aktuelle Phase: "
 msgid "Deadline: "
 msgstr "Deadline: "
 
-#: rpocore/templates/pages/statementpage.html:25
-msgid "Formal statements"
-msgstr "Offizielle Statements"
-
 #: rpocore/templates/pages/statementpage.html:28
 msgid "These statements are required for the process to continue."
-msgstr "Diese Statements werden benötigt, damit der Prozess fortgesetzt werden kann."
+msgstr ""
+"Diese Stellungnahmen werden benötigt, damit der Prozess fortgesetzt werden kann."
 
 #: rpocore/templates/pages/statementpage.html:39
 msgid "Statement pending"
-msgstr "Ausstehendes Statement"
-
-#: rpocore/templates/pages/statementpage.html:45
-msgid "Informal statements"
-msgstr "Inoffizielle Statements"
+msgstr "Ausstehende Stellungnahme"
 
 #: rpocore/templates/pages/statementpage.html:48
 msgid ""
 "These statements are not required for the process to continue but are "
 "interesting nonetheless."
 msgstr ""
-"Diese Statements werden nicht für den Fortgang des Prozesses benötigt, sind "
+"Diese Stellungnahmen werden nicht für den Fortgang des Prozesses benötigt, sind "
 "jedoch in jedem Fall interessant."
 
 #: rpocore/templates/pages/statementpage.html:64
@@ -317,18 +425,14 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"               Bitte verstehe, dass keine Statements von Einzelpersonen hier "
+"               Bitte verstehe, dass keine Stellungnahmen von Einzelpersonen hier "
 "angezeigt werden können. Wenn du eine Organisation vertrittst\n"
-"               und deren Statement einreichen möchtest, fahre fort.\n"
+"               und deren Stellungnahme einreichen möchtest, fahre fort.\n"
 "               "
 
 #: rpocore/templates/pages/statementpage.html:69
 msgid "Submit statement"
-msgstr "Statement einreichen"
-
-#: rpocore/templates/pages/supporterpage.html:23
-msgid "Notable supporters"
-msgstr "Nennenswerte Unterstützer"
+msgstr "Stellungnahme einreichen"
 
 #: rpocore/templates/pages/supporterpage.html:33
 msgid "No image available"
@@ -362,13 +466,9 @@ msgstr "Gesamtanzahl von der Gruppe"
 msgid "Supporters from University of Hamburg"
 msgstr "Unterstützer*Innen von der Uni Hamburg"
 
-#: rpocore/templates/pages/supporterpage.html:65
-msgid "Support group"
-msgstr "Statusgruppe"
-
 #: rpocore/templates/pages/supporterpage.html:66
 msgid "Current stretch goal"
-msgstr "Aktuelles Stretch Goal"
+msgstr "Aktuelles Ziel"
 
 #: rpocore/templates/pages/supporterpage.html:85
 msgid "Support statements"
@@ -388,7 +488,9 @@ msgstr ""
 
 #: rpocore/views.py:29
 msgid "A verification email has been sent with a link to verify your support."
-msgstr "Eine Verifikations-E-Mail wurde mit einem Link an dich gesendet, um die Unterstützung zu verifizieren."
+msgstr ""
+"Eine Verifikations-E-Mail wurde mit einem Link an dich gesendet, um die "
+"Unterstützung zu verifizieren."
 
 #: rpocore/views.py:33 rpocore/views.py:59
 msgid "Successfully supported the campaign"

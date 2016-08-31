@@ -271,7 +271,7 @@ ADMIN_MENU_ORDER = (
         'rpocore.NotableSupporter',
         'rpocore.FormalStatement',
         'rpocore.InformalStatement',
-        ('Processes', 'rpocore.Process'),
+        'rpocore.Process',
         'rpocore.Phase',
         'rpocore.CarouselItem'
     ))
