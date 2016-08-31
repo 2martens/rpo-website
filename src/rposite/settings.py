@@ -112,7 +112,7 @@ LANGUAGE_CODE = "de"
 
 # Supported languages
 LANGUAGES = (
-    ('en', _('English')),
+    #('en', _('English')),
     ('de', _('German')),
 )
 
