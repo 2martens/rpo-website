@@ -20,6 +20,9 @@
 .supportStatement {
     margin-top: 10px;
 }
+.statements {
+    margin-bottom: 5px;
+}
 
 .submit-row {
     z-index: 5;

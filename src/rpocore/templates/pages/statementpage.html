@@ -33,11 +33,11 @@
             {% for statement in page.statementpage.formal_statements.all %}
                 <div>
                     <strong>{{ statement.organization }}</strong>:
-                    {% ifnotequal statement.file '' %}
+                    {% if statement.file != '' %}
                         <a href="{{ MEDIA_URL }}{{ statement.file }}"><span class="fa fa-file-pdf-o"></span></a>
                     {% else %}
                         <span>{% trans 'Statement pending' %}</span>
-                    {% endifnotequal %}
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
@@ -49,16 +49,18 @@
                 </div>
             </div>
             {# informal statements #}
+            <div class="statements">
             {% for statement in page.statementpage.informal_statements.all %}
-                {% ifnotequal statement.file '' %}
+                {% if statement.file != '' %}
                     <div>
                         <strong>{{ statement.organization }}</strong>:
                         <a href="{{ MEDIA_URL }}{{ statement.file }}">
                             <span class="fa fa-file-pdf-o"></span>
                         </a>
                     </div>
-                {% endifnotequal %}
+                {% endif %}
             {% endfor %}
+            </div>
 
             <p>
                 {% blocktrans %}
