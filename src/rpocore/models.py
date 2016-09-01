@@ -90,7 +90,7 @@ class SupporterPage(Page):
 
 
 class FormalStatement(models.Model):
-    organization = models.CharField(_('Organization'), max_length=30)
+    organization = models.CharField(_('Organization'), max_length=255)
     file = models.FileField(_('File'), help_text=_('Only PDF files allowed'), upload_to='statements', blank=True)
 
     def __str__(self):
@@ -102,7 +102,7 @@ class FormalStatement(models.Model):
 
 
 class InformalStatement(models.Model):
-    organization = models.CharField(_('Organization'), max_length=30)
+    organization = models.CharField(_('Organization'), max_length=255)
     file = models.FileField(_('File'), help_text=_('Only PDF files allowed'), upload_to='statements')
 
     def __str__(self):
