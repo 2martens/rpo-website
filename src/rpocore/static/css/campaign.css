@@ -61,13 +61,14 @@
 }
 
 .carousel-inner .item {
-    height: 360px;
+    height: 480px;
 }
 
 .carousel-inner .item .content {
     height: 100%;
 }
 
-.middle img {
+.carousel-inner > .item > a > img {
     max-width: inherit;
+    height: 480px
 }
