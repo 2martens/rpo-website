@@ -72,3 +72,7 @@
     max-width: inherit;
     height: 480px
 }
+
+.carousel-inner > .item > a > .carousel-caption > h3 {
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)
+}
