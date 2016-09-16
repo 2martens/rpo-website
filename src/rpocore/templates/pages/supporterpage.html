@@ -90,17 +90,19 @@
                 {{ supporter.statement }}
             </q>
             <div>
-                <strong>
-                {% if supporter.support_anonymous %}
-                    {% trans 'Anonymous supporter' %}
-                {% else %}
-                    {{ supporter.user.first_name }} {{ supporter.user.last_name }}
+                <strong><!--
+                    {% if supporter.support_anonymous %}
+                        -->{% trans 'Anonymous supporter' %}<!--
+                    {% else %}
+                        -->{{ supporter.user.first_name }} {{ supporter.user.last_name }}<!--
                 {% endif %}
-                </strong>
-                {% ifnotequal supporter.additional_information '' %}
-                    , <span>{{ supporter.additional_information }}</span>
-                {% endifnotequal %}
-                , <span>{{ supporter.get_university_display }}</span>
+                --></strong><!--
+                --><span><!--
+                    {% if supporter.additional_information != '' %}
+                        -->, {{ supporter.additional_information }}<!--
+                    {% endif %}
+                    -->, {{ supporter.get_university_display }}<!--
+                --></span>
             </div>
         </div>
     {% endfor %}
