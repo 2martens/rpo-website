@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-31 11:29+0200\n"
+"POT-Creation-Date: 2016-09-16 12:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -181,8 +181,8 @@ msgid "Please enter the markup for this block."
 msgstr "Bitte das Markup für den Abschnitt angeben"
 
 #: rpocore/models.py:169
-msgid "Supporter statistics block"
-msgstr "Abschnitt für Unterstützerstatistiken"
+msgid "Become supporter block"
+msgstr "'Werde Unterstützer*In'-Abschnitt"
 
 #: rpocore/models.py:174
 msgid "Get active block"
@@ -336,6 +336,7 @@ msgid "Log out"
 msgstr "Ausloggen"
 
 #: rpocore/templates/accounts/includes/user_panel.html:20
+#: rpocore/templates/admin/login.html:63
 msgid "Log in"
 msgstr "Einloggen"
 
@@ -347,29 +348,94 @@ msgstr "oder"
 msgid "Sign up"
 msgstr "Unterstützen"
 
+#: rpocore/templates/admin/base.html:48
+msgid "Home"
+msgstr "Home"
+
 #: rpocore/templates/admin/base_site.html:20
 msgid "View site"
 msgstr "Seite ansehen"
+
+#: rpocore/templates/admin/login.html:24
+msgid "You don't have permission to access the admin for this site."
+msgstr "Du hast keine Berechtigung den Adminbereich für diese Website zu betreten."
+
+#: rpocore/templates/admin/login.html:31
+msgid "Username or email:"
+msgstr "Benutzername oder Email:"
+
+#: rpocore/templates/admin/login.html:35
+msgid "Password:"
+msgstr "Passwort:"
+
+#: rpocore/templates/admin/login.html:42
+msgid "Language"
+msgstr "Sprache"
+
+#: rpocore/templates/admin/login.html:53
+msgid "Interface:"
+msgstr "Bereich:"
+
+#: rpocore/templates/admin/login.html:56
+msgid "Admin"
+msgstr "Adminbereich"
+
+#: rpocore/templates/admin/login.html:59
+msgid "Site"
+msgstr "Website"
+
+#: rpocore/templates/admin/login.html:66
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
 
 #: rpocore/templates/base.html:57
 msgid "Toggle Navigation"
 msgstr "Navigation an/ausschalten"
 
-#: rpocore/templates/base.html:131
+#: rpocore/templates/base.html:130
 msgid "Powered by"
 msgstr "Powered by"
 
-#: rpocore/templates/base.html:134
+#: rpocore/templates/base.html:133
 msgid "and"
 msgstr "und"
 
-#: rpocore/templates/base.html:137
+#: rpocore/templates/base.html:136
 msgid "Theme by"
 msgstr "Theme by"
 
-#: rpocore/templates/base.html:140
+#: rpocore/templates/base.html:139
 msgid "View Mobile Site"
 msgstr "Mobile Seite ansehen"
+
+#: rpocore/templates/includes/search_form.html:5
+#: rpocore/templates/mobile/includes/search.html:4
+msgid "Search"
+msgstr "Suche"
+
+#: rpocore/templates/includes/search_form.html:14
+msgid "Everything"
+msgstr "Alles"
+
+#: rpocore/templates/includes/search_form.html:26
+msgid "Go"
+msgstr "Suchen"
+
+#: rpocore/templates/mobile/includes/search.html:5
+msgid "Use "
+msgstr "Benutzen"
+
+#: rpocore/templates/mobile/includes/search.html:5
+msgid "quotes"
+msgstr "Zitate"
+
+#: rpocore/templates/mobile/includes/search.html:5
+msgid ""
+" for exact phrases, + to make a word or phrase required, and - to exclude a "
+"word or phrase."
+msgstr ""
+" für genaue Zeichenfolgen, + um ein Wort oder eine Zeichenkette vorauszusetzen, und - um ein Wort "
+"oder eine Zeichenkette auszuschließen."
 
 #: rpocore/templates/pages/index.html:86
 msgid "Aktuelle Phase: "
@@ -397,21 +463,22 @@ msgstr ""
 "Diese Stellungnahmen werden nicht für den Fortgang des Prozesses benötigt, "
 "sind jedoch in jedem Fall interessant."
 
-#: rpocore/templates/pages/statementpage.html:64
+#: rpocore/templates/pages/statementpage.html:66
 msgid ""
 "\n"
 "                Please understand that no statements from individuals can be "
 "shown here. If you are an organization\n"
-"                and want to submit your statement, go ahead.\n"
+"                (e.g. AStA, FSR) and want to submit your statement, go "
+"ahead.\n"
 "                "
 msgstr ""
 "\n"
 "               Bitte verstehe, dass keine Stellungnahmen von Einzelpersonen "
-"hier angezeigt werden können. Wenn du eine Organisation vertrittst\n"
+"hier angezeigt werden können. Wenn du eine Organisation (z.B. AStA, FSR) vertrittst\n"
 "               und deren Stellungnahme einreichen möchtest, fahre fort.\n"
 "               "
 
-#: rpocore/templates/pages/statementpage.html:69
+#: rpocore/templates/pages/statementpage.html:71
 msgid "Submit statement"
 msgstr "Stellungnahme einreichen"
 
@@ -488,6 +555,9 @@ msgstr "Der von dir angeklickte Link ist nicht länger gültig."
 #: rposite/settings.py:116
 msgid "German"
 msgstr "Deutsch"
+
+#~ msgid "Supporter statistics block"
+#~ msgstr "Abschnitt für Unterstützerstatistiken"
 
 #~ msgid "English"
 #~ msgstr "Englisch"
