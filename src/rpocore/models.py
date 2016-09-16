@@ -166,7 +166,7 @@ class HomepagePage(Page):
         help_text=_('Please enter the markup for this block.')
     )
     supporter_statistics = RichTextField(
-        _('Supporter statistics block'),
+        _('Become supporter block'),
         blank=True,
         help_text=_('Please enter the markup for this block.')
     )
