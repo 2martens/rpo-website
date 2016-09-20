@@ -123,8 +123,8 @@ class StatementPage(Page):
 
 
 class Phase(Orderable):
-    name = models.CharField(max_length=30)
-    description = models.CharField(_('Description'), max_length=100)
+    name = models.CharField(max_length=255)
+    description = models.CharField(_('Description'), max_length=255)
     start_date = models.DateField(default=date.today)
     end_date = models.DateField(default=date.today)
     process = models.ForeignKey('rpocore.Process', on_delete=models.CASCADE)
