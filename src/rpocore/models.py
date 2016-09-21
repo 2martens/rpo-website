@@ -32,7 +32,7 @@ class Supporter(models.Model):
         null=True,
         help_text=_('This statement will appear on the list of supporters together with your name.')
     )
-    support_group = models.ForeignKey(SupportGroup, on_delete=models.PROTECT, null=True)
+    support_group = models.ForeignKey(SupportGroup, on_delete=models.PROTECT, null=True, verbose_name=_('Support group'))
     support_anonymous = models.BooleanField(
         _('Support anonymously'),
         help_text=_('If checked your name will not appear on the list of supporters.'),
@@ -63,7 +63,8 @@ class Supporter(models.Model):
 
 
 class NotableSupporter(Orderable):
-    supporter_page = models.ForeignKey('rpocore.SupporterPage', related_name='notable_supporters', null=True)
+    supporter_page = models.ForeignKey('rpocore.SupporterPage', related_name='notable_supporters', null=True,
+                                       verbose_name=_('Supporter page'))
     name = models.CharField(max_length=30)
     position = models.CharField(_('Position'), max_length=50)
     FACULTIES = (
@@ -118,8 +119,8 @@ class InformalStatement(models.Model):
 
 
 class StatementPage(Page):
-    formal_statements = models.ManyToManyField(FormalStatement, blank=True)
-    informal_statements = models.ManyToManyField(InformalStatement, blank=True)
+    formal_statements = models.ManyToManyField(FormalStatement, blank=True, verbose_name=_('Formal statements'))
+    informal_statements = models.ManyToManyField(InformalStatement, blank=True, verbose_name=_('Informal statements'))
     
     class Meta:
         verbose_name = _('Statement page')
@@ -131,7 +132,7 @@ class Phase(Orderable):
     description = models.CharField(_('Description'), max_length=255)
     start_date = models.DateField(default=date.today)
     end_date = models.DateField(default=date.today)
-    process = models.ForeignKey('rpocore.Process', on_delete=models.CASCADE)
+    process = models.ForeignKey('rpocore.Process', on_delete=models.CASCADE, verbose_name=_('Process'))
     active = models.BooleanField(_('Active'), default=False)
     
     class Meta:
@@ -163,7 +164,7 @@ class Process(models.Model):
 
 
 class HomepagePage(Page):
-    process = models.ForeignKey(Process, on_delete=models.SET_NULL, null=True)
+    process = models.ForeignKey(Process, on_delete=models.SET_NULL, null=True, verbose_name=_('Process'))
     campaign_positions = RichTextField(
         _('Campaign positions block'),
         blank=True,
@@ -186,7 +187,7 @@ class HomepagePage(Page):
 
 
 class CarouselItem(Orderable):
-    homepage = models.ForeignKey(HomepagePage, related_name='carousel_items')
+    homepage = models.ForeignKey(HomepagePage, related_name='carousel_items', verbose_name=_('Homepage'))
     url = models.CharField(_('URL'), max_length=200)
     caption = models.CharField(_('Caption'), max_length=100)
     background_image = models.ImageField(

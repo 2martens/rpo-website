@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-21 13:40+0200\n"
+"POT-Creation-Date: 2016-09-21 19:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jim Martens <github@2martens.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,8 @@ msgstr "Gesamtanzahl"
 msgid "Stretch goals"
 msgstr "Ziele"
 
-#: rpocore/models.py:24 rpocore/templates/pages/supporterpage.html:65
+#: rpocore/models.py:24 rpocore/models.py:35
+#: rpocore/templates/pages/supporterpage.html:65
 msgid "Support group"
 msgstr "Statusgruppe"
 
@@ -68,163 +69,171 @@ msgstr ""
 "Organisationen angeben. Diese Angaben erscheinen neben deinem Namen auf der "
 "Seite der Unterstützer*Innen."
 
-#: rpocore/models.py:54
+#: rpocore/models.py:58
 msgid "University"
 msgstr "Universität"
 
-#: rpocore/models.py:57
+#: rpocore/models.py:61
 msgid "Supporter"
 msgstr "Unterstützer*In"
 
-#: rpocore/models.py:58
+#: rpocore/models.py:62
 msgid "Supporters"
 msgstr "Unterstützer*Innen"
 
-#: rpocore/models.py:64 rpocore/templates/pages/supporterpage.html:38
-msgid "Position"
-msgstr "Position"
-
-#: rpocore/models.py:75 rpocore/templates/pages/supporterpage.html:39
-msgid "Faculty"
-msgstr "Fakultät"
-
-#: rpocore/models.py:76
-msgid "Image"
-msgstr "Bild"
-
-#: rpocore/models.py:82
-msgid "First signatory"
-msgstr "Erstunterzeichner*In"
-
-#: rpocore/models.py:83 rpocore/templates/pages/supporterpage.html:23
-msgid "First signatories"
-msgstr "Erstunterzeichner*Innen"
-
-#: rpocore/models.py:88
+#: rpocore/models.py:67 rpocore/models.py:93
 msgid "Supporter page"
 msgstr "Unterstützer*Innen-Seite"
 
-#: rpocore/models.py:89
+#: rpocore/models.py:69 rpocore/templates/pages/supporterpage.html:38
+msgid "Position"
+msgstr "Position"
+
+#: rpocore/models.py:80 rpocore/templates/pages/supporterpage.html:39
+msgid "Faculty"
+msgstr "Fakultät"
+
+#: rpocore/models.py:81
+msgid "Image"
+msgstr "Bild"
+
+#: rpocore/models.py:87
+msgid "First signatory"
+msgstr "Erstunterzeichner*In"
+
+#: rpocore/models.py:88 rpocore/templates/pages/supporterpage.html:23
+msgid "First signatories"
+msgstr "Erstunterzeichner*Innen"
+
+#: rpocore/models.py:94
 msgid "Supporter pages"
 msgstr "Unterstützer*Innen-Seiten"
 
-#: rpocore/models.py:93 rpocore/models.py:105
+#: rpocore/models.py:98 rpocore/models.py:110
 msgid "Organization"
 msgstr "Organisation"
 
-#: rpocore/models.py:94 rpocore/models.py:106
+#: rpocore/models.py:99 rpocore/models.py:111
 msgid "File"
 msgstr "Datei"
 
-#: rpocore/models.py:94 rpocore/models.py:106
+#: rpocore/models.py:99 rpocore/models.py:111
 msgid "Only PDF files allowed"
 msgstr "Nur PDF-Dateien sind erlaubt"
 
-#: rpocore/models.py:100
+#: rpocore/models.py:105
 msgid "Formal statement"
 msgstr "Offizielle Stellungnahme"
 
-#: rpocore/models.py:101 rpocore/templates/pages/statementpage.html:25
+#: rpocore/models.py:106 rpocore/models.py:122
+#: rpocore/templates/pages/statementpage.html:25
 msgid "Formal statements"
 msgstr "Offizielle Stellungnahmen"
 
-#: rpocore/models.py:112
+#: rpocore/models.py:117
 msgid "Informal statement"
 msgstr "Inoffizielle Stellungnahme"
 
-#: rpocore/models.py:113 rpocore/templates/pages/statementpage.html:45
+#: rpocore/models.py:118 rpocore/models.py:123
+#: rpocore/templates/pages/statementpage.html:45
 msgid "Informal statements"
 msgstr "Inoffizielle Stellungnahmen"
 
-#: rpocore/models.py:121
+#: rpocore/models.py:126
 msgid "Statement page"
 msgstr "Stellungnahmen-Seite"
 
-#: rpocore/models.py:122
+#: rpocore/models.py:127
 msgid "Statement pages"
 msgstr "Stellungnahmen-Seiten"
 
-#: rpocore/models.py:127
+#: rpocore/models.py:132
 msgid "Description"
 msgstr "Beschreibung"
 
-#: rpocore/models.py:131
-msgid "Active"
-msgstr "Aktiv"
-
-#: rpocore/models.py:134
-msgid "Phase"
-msgstr "Phase"
-
-#: rpocore/models.py:135
-msgid "Phases"
-msgstr "Phasen"
-
-#: rpocore/models.py:154
-msgid "Result"
-msgstr "Ergebnis"
-
-#: rpocore/models.py:157
+#: rpocore/models.py:135 rpocore/models.py:162 rpocore/models.py:167
 msgid "Process"
 msgstr "Prozess"
 
-#: rpocore/models.py:158
+#: rpocore/models.py:136
+msgid "Active"
+msgstr "Aktiv"
+
+#: rpocore/models.py:139
+msgid "Phase"
+msgstr "Phase"
+
+#: rpocore/models.py:140
+msgid "Phases"
+msgstr "Phasen"
+
+#: rpocore/models.py:159
+msgid "Result"
+msgstr "Ergebnis"
+
+#: rpocore/models.py:163
 msgid "Processes"
 msgstr "Prozesse"
 
-#: rpocore/models.py:164
+#: rpocore/models.py:169
 msgid "Campaign positions block"
 msgstr "Abschnitt über Kampagnen-Positionen"
 
-#: rpocore/models.py:166 rpocore/models.py:171 rpocore/models.py:176
+#: rpocore/models.py:171 rpocore/models.py:176 rpocore/models.py:181
 msgid "Please enter the markup for this block."
 msgstr "Bitte das Markup für den Abschnitt angeben"
 
-#: rpocore/models.py:169
+#: rpocore/models.py:174
 msgid "Become supporter block"
 msgstr "'Werde Unterstützer*In'-Abschnitt"
 
-#: rpocore/models.py:174
+#: rpocore/models.py:179
 msgid "Get active block"
 msgstr "'Werde aktiv'-Abschnitt"
 
-#: rpocore/models.py:180
+#: rpocore/models.py:185
 msgid "Homepage page"
 msgstr "Homepage-Seite"
 
-#: rpocore/models.py:181
+#: rpocore/models.py:186
 msgid "Homepage pages"
 msgstr "Homepage-Seiten"
 
-#: rpocore/models.py:186
+#: rpocore/models.py:190
+#, fuzzy
+#| msgid "Homepage page"
+msgid "Homepage"
+msgstr "Homepage-Seite"
+
+#: rpocore/models.py:191
 msgid "URL"
 msgstr "URL"
 
-#: rpocore/models.py:187
+#: rpocore/models.py:192
 msgid "Caption"
 msgstr "Überschrift"
 
-#: rpocore/models.py:189
+#: rpocore/models.py:194
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: rpocore/models.py:190
+#: rpocore/models.py:195
 msgid "If you don't upload an image the background HTML will be used."
 msgstr "Wenn du kein Bild hochlädst, wird das Hintergrund-HTML benutzt."
 
-#: rpocore/models.py:194
+#: rpocore/models.py:199
 msgid "Background HTML"
 msgstr "Hintergrund HTML"
 
-#: rpocore/models.py:195
+#: rpocore/models.py:200
 msgid "This field will be used if you don't upload an image."
 msgstr "Dieses Feld wird benutzt, wenn du kein Bild hochlädst."
 
-#: rpocore/models.py:203
+#: rpocore/models.py:208
 msgid "Carousel item"
 msgstr "Slideshow Element"
 
-#: rpocore/models.py:204
+#: rpocore/models.py:209
 msgid "Carousel items"
 msgstr "Slideshow Elemente"
 
