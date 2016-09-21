@@ -49,6 +49,10 @@ class Supporter(models.Model):
         ('UHH', 'Universität Hamburg'),
         ('TUHH', 'Technische Universität Hamburg'),
         ('HAW', 'Hochschule für Angewandte Wissenschaften Hamburg'),
+        ('HCU', 'HafenCity Universität Hamburg'),
+        ('HFBK', 'Hochschule für bildende Künste Hamburg'),
+        ('HfMT', 'Hochschule für Musik und Theater Hamburg'),
+        ('HSU', 'Helmut-Schmidt-Universität Hamburg'),
         ('Other', 'Andere Universität oder Hochschule')
     )
     university = models.CharField(_('University'), choices=UNIVERSITIES, max_length=30, null=True)
