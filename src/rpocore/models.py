@@ -79,8 +79,8 @@ class NotableSupporter(Orderable):
         return self.name
     
     class Meta:
-        verbose_name = _('Notable supporter')
-        verbose_name_plural = _('Notable supporters')
+        verbose_name = _('First signatory')
+        verbose_name_plural = _('First signatories')
 
 
 class SupporterPage(Page):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-16 12:41+0200\n"
+"POT-Creation-Date: 2016-09-21 13:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jim Martens <github@2martens.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,12 +93,12 @@ msgid "Image"
 msgstr "Bild"
 
 #: rpocore/models.py:82
-msgid "Notable supporter"
-msgstr "Nennenswerte Unterstützer*In"
+msgid "First signatory"
+msgstr "Erstunterzeichner*In"
 
 #: rpocore/models.py:83 rpocore/templates/pages/supporterpage.html:23
-msgid "Notable supporters"
-msgstr "Nennenswerte Unterstützer*Innen"
+msgid "First signatories"
+msgstr "Erstunterzeichner*Innen"
 
 #: rpocore/models.py:88
 msgid "Supporter page"
@@ -557,9 +557,3 @@ msgstr "Der von dir angeklickte Link ist nicht länger gültig."
 #: rposite/settings.py:116
 msgid "German"
 msgstr "Deutsch"
-
-#~ msgid "Supporter statistics block"
-#~ msgstr "Abschnitt für Unterstützerstatistiken"
-
-#~ msgid "English"
-#~ msgstr "Englisch"
