@@ -85,7 +85,27 @@ footer .nav {
     text-align: center;
 }
 
+.wrapper {
+    padding-bottom: 170px;
+}
+
+footer {
+    height: 155px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .row.inner {
     margin-left: auto;
     margin-right: auto;
+}
+
+.globalwrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+html, body {
+    height: 100%;
 }

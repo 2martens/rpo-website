@@ -52,6 +52,7 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 
+<div class="globalwrapper">
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -97,7 +98,7 @@
 
 </div>
 
-<div class="container">
+<div class="container wrapper">
     <div class="row">
 
         <div class="col-md-9 middle">
@@ -121,6 +122,7 @@
         </div>
 
     </div>
+    <div class="push"></div>
 </div>
 
 <footer>
@@ -144,6 +146,7 @@
         </div>
     </div>
 </footer>
+</div>
 
 {% block footer_js %}
 {% include "includes/footer_scripts.html" %}
