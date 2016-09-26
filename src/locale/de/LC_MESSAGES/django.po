@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-21 19:34+0200\n"
+"POT-Creation-Date: 2016-09-26 17:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jim Martens <github@2martens.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -358,6 +358,7 @@ msgid "Sign up"
 msgstr "Unterstützen"
 
 #: rpocore/templates/admin/base.html:48
+#: rpocore/templates/pages/menus/dropdown.html:10
 msgid "Home"
 msgstr "Home"
 
@@ -398,25 +399,40 @@ msgstr "Website"
 msgid "Forgot password?"
 msgstr "Passwort vergessen?"
 
-#: rpocore/templates/base.html:57
+#: rpocore/templates/base.html:60
 msgid "Toggle Navigation"
 msgstr "Navigation an/ausschalten"
 
-#: rpocore/templates/base.html:130
+#: rpocore/templates/base.html:134
 msgid "Powered by"
 msgstr "Powered by"
 
-#: rpocore/templates/base.html:133
+#: rpocore/templates/base.html:137
 msgid "and"
 msgstr "und"
 
-#: rpocore/templates/base.html:136
+#: rpocore/templates/base.html:140
 msgid "Theme by"
 msgstr "Theme by"
 
-#: rpocore/templates/base.html:139
+#: rpocore/templates/base.html:143
 msgid "View Mobile Site"
 msgstr "Mobile Seite ansehen"
+
+#: rpocore/templates/email/signup_verify.html:3
+#: rpocore/templates/email/signup_verify.txt:3
+msgid "Hey there, thanks for supporting our campaign."
+msgstr "Herzlichen Dank für die Unterstützung unserer Kampagne."
+
+#: rpocore/templates/email/signup_verify.html:4
+#: rpocore/templates/email/signup_verify.txt:4
+msgid "Please use the link below to verify your support."
+msgstr ""
+"Bitte den nachfolgenden Link benutzen, um die Unterstützung zu bestätigen."
+
+#: rpocore/templates/email/signup_verify_subject.txt:2
+msgid "Confirm your support"
+msgstr "Unterstützung bestätigen"
 
 #: rpocore/templates/includes/search_form.html:5
 #: rpocore/templates/mobile/includes/search.html:4
