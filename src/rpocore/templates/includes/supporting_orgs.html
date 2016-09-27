@@ -10,7 +10,7 @@
         <ul class="list-unstyled">
             {% for org in orgs %}
             <li>
-                <a href="{{ org.url }}"><img src="{{ MEDIA_URL }}{{ org.logo }}" alt="{{ org.name }}"></a>
+                <a href="{{ org.url }}"><img width="180" src="{{ MEDIA_URL }}{{ org.logo }}" alt="{{ org.name }}"></a>
             </li>
             {% endfor %}
         </ul>
