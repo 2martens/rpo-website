@@ -43,7 +43,7 @@ msgstr "Unterstützungsstatement"
 msgid ""
 "This statement will appear on the list of supporters together with your name."
 msgstr ""
-"Dieses Statement wird zusammen mit deinem Namen auf der Seite der "
+"Dieses Statement wird zusammen mit Ihrem Namen auf der Seite der "
 "Unterstützer*Innen erscheinen."
 
 #: rpocore/models.py:37
@@ -53,7 +53,7 @@ msgstr "Anonym unterstützen"
 #: rpocore/models.py:38
 msgid "If checked your name will not appear on the list of supporters."
 msgstr ""
-"Wenn du dies ankreuzt, erscheint dein Name nicht auf der Seite der "
+"Wenn Sie dies ankreuzen, erscheint Ihr Name nicht auf der Seite der "
 "Unterstützer*Innen"
 
 #: rpocore/models.py:42
@@ -65,8 +65,8 @@ msgid ""
 "Here you can specify additional information about your activities, "
 "organizations, etc. It appears next to your name in the list of supporters."
 msgstr ""
-"Hier kannst du ergänzende Informationen u.a. über deine Aktivitäten und "
-"Organisationen angeben. Diese Angaben erscheinen neben deinem Namen auf der "
+"Hier können Sie ergänzende Informationen u.a. über Ihre Aktivitäten und "
+"Organisationen angeben. Diese Angaben erscheinen neben Ihrem Namen auf der "
 "Seite der Unterstützer*Innen."
 
 #: rpocore/models.py:58
@@ -200,8 +200,6 @@ msgid "Homepage pages"
 msgstr "Homepage-Seiten"
 
 #: rpocore/models.py:190
-#, fuzzy
-#| msgid "Homepage page"
 msgid "Homepage"
 msgstr "Homepage-Seite"
 
@@ -239,7 +237,7 @@ msgstr "Slideshow Elemente"
 
 #: rpocore/templates/accounts/account_login.html:9
 msgid "You're already logged in."
-msgstr "Du bist bereits eingeloggt."
+msgstr "Sie sind bereits eingeloggt."
 
 #: rpocore/templates/accounts/account_login.html:15
 msgid "This is the log in page for everyone who supported this campaign."
@@ -251,7 +249,7 @@ msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
 msgstr ""
-"Wenn du kein Account hast, kannst du einen <a href=\"%(signup_url)s?next="
+"Wenn Sie kein Account haben, können Sie einen <a href=\"%(signup_url)s?next="
 "%(next)s\">registrieren</a>."
 
 #: rpocore/templates/accounts/account_login.html:23
@@ -260,10 +258,12 @@ msgid ""
 "<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
 "\">reset your password</a> if you've forgotten it.</p>"
 msgstr ""
+"<p>Sie können ebenfalls Ihr <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
+"\">Passwort zurücksetzen</a>, wenn Sie es vergessen haben.</p>"
 
 #: rpocore/templates/accounts/account_signup.html:7
 msgid "You already support the RPO 2016 campaign."
-msgstr "Du unterstützt die RPO 2016 Kampagne bereits."
+msgstr "Sie unterstützen die RPO 2016 Kampagne bereits."
 
 #: rpocore/templates/accounts/account_signup.html:12
 msgid ""
@@ -277,10 +277,10 @@ msgid ""
 msgstr ""
 "\n"
 "                   Willkommen auf der Unterstützungsseite. Die hier "
-"eingegebenenInformationen werden hauptsächlich genutzt, um deine "
+"eingegebenen Informationen werden hauptsächlich genutzt, um Ihre "
 "Unterstützung auf der\n"
 "                   Liste der Unterstützer*Innen anzuzeigen. Die Email wird "
-"benötigt, um deine Unterstützung zu verifizieren. Wir möchten dich bitten "
+"benötigt, um Ihre Unterstützung zu verifizieren. Wir möchten Sie bitten "
 "eine von der Uni\n"
 "                   bereitgestellte E-Mail-Adresse zu nutzen, um Missbrauch "
 "so gut es geht zu reduzieren."
@@ -300,11 +300,11 @@ msgstr ""
 "\n"
 "                   Der Benutzername und das Passwort werden für den Login "
 "benötigt. Allerdings\n"
-"                   kannst du nach der Unterstützung lediglich dein Profil "
+"                   können Sie nach der Unterstützung lediglich Ihr Profil "
 "editieren und damit verbunden die zur Unterstützung bereitgestellten "
 "Informationen.\n"
-"                   Beispielsweise kannst du zunächst anonym unterstützen und "
-"später entscheiden auch mit deinem Namen zu unterstützen."
+"                   Beispielsweise können Sie zunächst anonym unterstützen und "
+"später entscheiden auch mit Ihrem Namen zu unterstützen."
 
 #: rpocore/templates/accounts/account_signup.html:27
 msgid ""
@@ -313,7 +313,7 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                    Wir sind froh, dich auf unserer Seite zu haben!\n"
+"                    Wir sind froh, Sie auf unserer Seite zu haben!\n"
 "                "
 
 #: rpocore/templates/accounts/account_signup.html:41
@@ -321,16 +321,16 @@ msgid ""
 "After supporting the campaign, your support pledge will be reviewed for "
 "approval. You'll receive an email when your support counts."
 msgstr ""
-"Nach der Unterstützung der Kampagne wird deine Unterstützungsabsicht "
-"überprüft werden. Du erhältst eine E-Mail, wenn deine Unterstützung zählt."
+"Nach der Unterstützung der Kampagne wird Ihre Unterstützungsabsicht "
+"überprüft werden. Sie erhalten eine E-Mail, wenn Ihre Unterstützung zählt."
 
 #: rpocore/templates/accounts/account_signup.html:44
 msgid ""
 "After supporting the campaign, you'll receive an email with a link you need "
 "to click, in order for the support to count."
 msgstr ""
-"Nach der Unterstützung der Kampagne wirst du eine E-Mail mit einem Link "
-"erhalten, den du aufrufen musst, damit deine Unterstützung zählt."
+"Nach der Unterstützung der Kampagne werden Sie eine E-Mail mit einem Link "
+"erhalten, den Sie aufrufen müssen, damit Ihre Unterstützung zählt."
 
 #: rpocore/templates/accounts/includes/user_panel.html:5
 msgid "Logged in as: "
@@ -369,7 +369,7 @@ msgstr "Seite ansehen"
 #: rpocore/templates/admin/login.html:24
 msgid "You don't have permission to access the admin for this site."
 msgstr ""
-"Du hast keine Berechtigung den Adminbereich für diese Website zu betreten."
+"Sie haben keine Berechtigung den Adminbereich für diese Website zu betreten."
 
 #: rpocore/templates/admin/login.html:31
 msgid "Username or email:"
@@ -499,10 +499,10 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"               Bitte verstehe, dass keine Stellungnahmen von Einzelpersonen "
-"hier angezeigt werden können. Wenn du eine Organisation (z.B. AStA, FSR) "
-"vertrittst\n"
-"               und deren Stellungnahme einreichen möchtest, fahre fort.\n"
+"               Bitte verstehen Sie, dass hier keine Stellungnahmen von Einzelpersonen "
+"angezeigt werden können. Wenn Sie eine Organisation (z.B. AStA, FSR) "
+"vertreten\n"
+"               und deren Stellungnahme einreichen möchten, fahren Sie fort.\n"
 "               "
 
 #: rpocore/templates/pages/statementpage.html:71
@@ -558,13 +558,13 @@ msgid ""
 "Thanks for supporting this campaign! You'll receive an email when your "
 "support is counted."
 msgstr ""
-"Danke für die Unterstützung dieser Kampagne. Du erhältst eine E-Mail, wenn "
-"deine Unterstützung gezählt wird."
+"Danke für die Unterstützung dieser Kampagne. Sie erhalten eine E-Mail, wenn "
+"Ihre Unterstützung gezählt wird."
 
 #: rpocore/views.py:29
 msgid "A verification email has been sent with a link to verify your support."
 msgstr ""
-"Eine Verifikations-E-Mail wurde mit einem Link an dich gesendet, um die "
+"Eine Verifikations-E-Mail wurde mit einem Link an Sie gesendet, um die "
 "Unterstützung zu verifizieren."
 
 #: rpocore/views.py:33 rpocore/views.py:59
@@ -577,7 +577,7 @@ msgstr "Unterstütze RPO 2016"
 
 #: rpocore/views.py:62
 msgid "The link you clicked is no longer valid."
-msgstr "Der von dir angeklickte Link ist nicht länger gültig."
+msgstr "Der von Ihnen angeklickte Link ist nicht länger gültig."
 
 #: rposite/settings.py:116
 msgid "German"
