@@ -207,3 +207,16 @@ class CarouselItem(Orderable):
     class Meta:
         verbose_name = _('Carousel item')
         verbose_name_plural = _('Carousel items')
+
+
+class SupportingOrganization(Orderable):
+    name = models.CharField(_('Name'), max_length=100)
+    logo = models.ImageField(_('Logo of organization'))
+    url = models.CharField(_('URL'), max_length=200)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _('Supporting organization')
+        verbose_name_plural = _('Supporting organizations')

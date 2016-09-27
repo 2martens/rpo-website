@@ -110,15 +110,16 @@
             {% include "includes/language_selector.html" %}
             {% include "includes/user_panel.html" %}
             {% endnevercache %}
-            <!--<div class="panel panel-default">
+            <div class="panel panel-default">
                 <div class="panel-body">
                 {% block right_panel %}
-                {% ifinstalled mezzanine.twitter %}
+                <!--{% ifinstalled mezzanine.twitter %}
                 {% include "twitter/tweets.html" %}
-                {% endifinstalled %}
+                {% endifinstalled %}-->
+                {% include "includes/supporting_orgs.html" %}
                 {% endblock %}
                 </div>
-            </div>-->
+            </div>
         </div>
 
     </div>

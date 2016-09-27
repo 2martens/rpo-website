@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-27 14:03+0200\n"
+"POT-Creation-Date: 2016-09-27 15:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Jim Martens <github@2martens.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,7 +203,7 @@ msgstr "Homepage-Seiten"
 msgid "Homepage"
 msgstr "Homepage-Seite"
 
-#: rpocore/models.py:191
+#: rpocore/models.py:191 rpocore/models.py:215
 msgid "URL"
 msgstr "URL"
 
@@ -234,6 +234,22 @@ msgstr "Slideshow Element"
 #: rpocore/models.py:209
 msgid "Carousel items"
 msgstr "Slideshow Elemente"
+
+#: rpocore/models.py:213 rpocore/templates/pages/supporterpage.html:37
+msgid "Name"
+msgstr "Name"
+
+#: rpocore/models.py:214
+msgid "Logo of organization"
+msgstr "Logo der Organisation"
+
+#: rpocore/models.py:221
+msgid "Supporting organization"
+msgstr "Unterstützende Organisation"
+
+#: rpocore/models.py:222 rpocore/templates/includes/supporting_orgs.html:7
+msgid "Supporting organizations"
+msgstr "Unterstützende Organisationen"
 
 #: rpocore/templates/accounts/account_login.html:9
 msgid "You're already logged in."
@@ -404,19 +420,19 @@ msgstr "Passwort vergessen?"
 msgid "Toggle Navigation"
 msgstr "Navigation an/ausschalten"
 
-#: rpocore/templates/base.html:134
+#: rpocore/templates/base.html:135
 msgid "Powered by"
 msgstr "Powered by"
 
-#: rpocore/templates/base.html:137
+#: rpocore/templates/base.html:138
 msgid "and"
 msgstr "und"
 
-#: rpocore/templates/base.html:140
+#: rpocore/templates/base.html:141
 msgid "Theme by"
 msgstr "Theme by"
 
-#: rpocore/templates/base.html:143
+#: rpocore/templates/base.html:144
 msgid "View Mobile Site"
 msgstr "Mobile Seite ansehen"
 
@@ -513,10 +529,6 @@ msgstr "Stellungnahme einreichen"
 #: rpocore/templates/pages/supporterpage.html:33
 msgid "No image available"
 msgstr "Kein Bild verfügbar"
-
-#: rpocore/templates/pages/supporterpage.html:37
-msgid "Name"
-msgstr "Name"
 
 #: rpocore/templates/pages/supporterpage.html:47
 msgid "Supporter statistics"
