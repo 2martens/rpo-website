@@ -20,6 +20,9 @@
 .supportStatement {
     margin-top: 10px;
 }
+.statements {
+    margin-bottom: 5px;
+}
 
 .submit-row {
     z-index: 5;
@@ -58,13 +61,51 @@
 }
 
 .carousel-inner .item {
-    height: 360px;
+    height: 480px;
 }
 
 .carousel-inner .item .content {
     height: 100%;
 }
 
-.middle img {
+.carousel-inner > .item > a > img {
     max-width: inherit;
+    height: 480px
+}
+
+.carousel-inner > .item > a > .carousel-caption > h3 {
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.5), transparent)
+}
+
+footer .nav > li {
+    display: inline-block;
+}
+
+footer .nav {
+    text-align: center;
+}
+
+.wrapper {
+    padding-bottom: 170px;
+}
+
+footer {
+    height: 155px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.row.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.globalwrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+html, body {
+    height: 100%;
 }

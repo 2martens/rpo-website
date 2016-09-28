@@ -108,11 +108,11 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "de"
 
 # Supported languages
 LANGUAGES = (
-    ('en', _('English')),
+    #('en', _('English')),
     ('de', _('German')),
 )
 
@@ -124,7 +124,7 @@ DEBUG = False
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -271,9 +271,10 @@ ADMIN_MENU_ORDER = (
         'rpocore.NotableSupporter',
         'rpocore.FormalStatement',
         'rpocore.InformalStatement',
-        ('Processes', 'rpocore.Process'),
+        'rpocore.Process',
         'rpocore.Phase',
-        'rpocore.CarouselItem'
+        'rpocore.CarouselItem',
+        'rpocore.SupportingOrganization',
     ))
 )
 
@@ -292,6 +293,8 @@ MIDDLEWARE_CLASSES = (
     # Uncomment if using internationalisation or localisation
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -314,6 +317,14 @@ MIDDLEWARE_CLASSES = (
 # at the moment we are using custom forks of them.
 PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
 PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
+
+### SECURITY OPTIONS
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'Deny'
+
+### DEPLOY OPTIONS
+USE_X_FORWARDED_HOST = True
 
 #########################
 # OPTIONAL APPLICATIONS #

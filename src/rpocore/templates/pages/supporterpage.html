@@ -20,29 +20,31 @@
 {% endblock %}
 
 {% block main %}
-    <h4 id="notable_supporters">{% trans 'Notable supporters' %}</h4>
-    {% for supporter in page.supporterpage.notable_supporters.all %}
-        <div class="panel panel-default supporterPanel">
-            <div class="panel-body">
-                <ul class="media-list">
-                    <li class="media">
-                        <div class="media-left">
-                            {% ifnotequal supporter.image '' %}
-                                <img class="media-object" src="{{ MEDIA_URL }}{{ supporter.image }}" alt="Image of {{ supporter.name }}" width="50">
-                            {% else %}
-                                {% trans 'No image available' %}
-                            {% endifnotequal %}
-                        </div>
-                        <div class="media-body">
-                            <div class="supporterLabel pull-left">{% trans 'Name' %}:</div><span class="supporterValue">{{ supporter.name }}</span><br />
-                            <div class="supporterLabel pull-left">{% trans 'Position' %}:</div><span class="supporterValue">{{ supporter.position }}</span><br />
-                            <div class="supporterLabel pull-left">{% trans 'Faculty' %}:</div><span class="supporterValue">{{ supporter.faculty }}</span>
-                        </div>
-                    </li>
-                </ul>
+    {% if page.supporterpage.notable_supporters.all %}
+        <h4 id="notable_supporters">{% trans 'First signatories' %}</h4>
+        {% for supporter in page.supporterpage.notable_supporters.all %}
+            <div class="panel panel-default supporterPanel">
+                <div class="panel-body">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                {% ifnotequal supporter.image '' %}
+                                    <img class="media-object" src="{{ MEDIA_URL }}{{ supporter.image }}" alt="Image of {{ supporter.name }}" width="50">
+                                {% else %}
+                                    {% trans 'No image available' %}
+                                {% endifnotequal %}
+                            </div>
+                            <div class="media-body">
+                                <div class="supporterLabel pull-left">{% trans 'Name' %}:</div><span class="supporterValue">{{ supporter.name }}</span><br />
+                                <div class="supporterLabel pull-left">{% trans 'Position' %}:</div><span class="supporterValue">{{ supporter.position }}</span><br />
+                                <div class="supporterLabel pull-left">{% trans 'Faculty' %}:</div><span class="supporterValue">{{ supporter.faculty }}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    {% endif %}
 
     <h4 id="statistics">{% trans 'Supporter statistics' %}</h4>
     {# expand with support statistics, variables will come from page processor #}
@@ -90,17 +92,19 @@
                 {{ supporter.statement }}
             </q>
             <div>
-                <strong>
-                {% if supporter.support_anonymous %}
-                    {% trans 'Anonymous supporter' %}
-                {% else %}
-                    {{ supporter.user.first_name }} {{ supporter.user.last_name }}
+                <strong><!--
+                    {% if supporter.support_anonymous %}
+                        -->{% trans 'Anonymous supporter' %}<!--
+                    {% else %}
+                        -->{{ supporter.user.first_name }} {{ supporter.user.last_name }}<!--
                 {% endif %}
-                </strong>
-                {% ifnotequal supporter.additional_information '' %}
-                    , <span>{{ supporter.additional_information }}</span>
-                {% endifnotequal %}
-                , <span>{{ supporter.get_university_display }}</span>
+                --></strong><!--
+                --><span><!--
+                    {% if supporter.additional_information != '' %}
+                        -->, {{ supporter.additional_information }}<!--
+                    {% endif %}
+                    -->, {{ supporter.get_university_display }}<!--
+                --></span>
             </div>
         </div>
     {% endfor %}

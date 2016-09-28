@@ -1,0 +1,19 @@
+
+{% load rpo_tags i18n %}
+
+{% support_orgs as orgs %}
+
+{% if orgs %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3>{% trans 'Supporting organizations' %}</h3>
+        <ul class="list-unstyled">
+            {% for org in orgs %}
+            <li>
+                <a href="{{ org.url }}"><img width="180" src="{{ MEDIA_URL }}{{ org.logo }}" alt="{{ org.name }}"></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}

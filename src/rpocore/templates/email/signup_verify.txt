@@ -1,0 +1,6 @@
+{% load i18n %}
+{% block main %}
+{% trans "Hey there, thanks for supporting our campaign." %}
+{% trans "Please use the link below to verify your support." %}
+http://{{ request.get_host }}{{ verify_url }}
+{% endblock %}
