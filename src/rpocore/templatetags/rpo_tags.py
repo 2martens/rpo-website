@@ -1,7 +1,8 @@
+import datetime
 
 from mezzanine import template
 
-from rpocore.models import SupportingOrganization
+from rpocore.models import SupportingOrganization, Event
 
 register = template.Library()
 
@@ -9,3 +10,8 @@ register = template.Library()
 @register.as_tag
 def support_orgs(*args):
     return SupportingOrganization.objects.all()
+
+
+@register.as_tag
+def events(*args):
+    return Event.objects.all().filter(datetime__gte=datetime.datetime.now())
