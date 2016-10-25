@@ -275,6 +275,7 @@ ADMIN_MENU_ORDER = (
         'rpocore.Phase',
         'rpocore.CarouselItem',
         'rpocore.SupportingOrganization',
+        'rpocore.Event',
     ))
 )
 

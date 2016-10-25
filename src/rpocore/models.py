@@ -220,3 +220,16 @@ class SupportingOrganization(Orderable):
     class Meta:
         verbose_name = _('Supporting organization')
         verbose_name_plural = _('Supporting organizations')
+
+
+class Event(Orderable):
+    name = models.CharField(_('Name'), max_length=100)
+    datetime = models.DateTimeField(_('Date and time'))
+    description = models.CharField(_('Description'), max_length=255)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _('Event')
+        verbose_name_plural = _('Events')

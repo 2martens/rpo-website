@@ -1,0 +1,19 @@
+
+{% load rpo_tags i18n %}
+
+{% if orgs %}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3>{% trans 'Events' %}</h3>
+        <ul class="list-unstyled">
+            {% for event in events %}
+            <li>
+                <span class="fa fa-calendar fa-2x"></span>
+                {{ event.name }}
+                {{ event.datetime }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}
