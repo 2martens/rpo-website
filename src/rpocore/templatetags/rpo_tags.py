@@ -1,3 +1,4 @@
+import datetime
 
 from mezzanine import template
 
@@ -13,4 +14,4 @@ def support_orgs(*args):
 
 @register.as_tag
 def events(*args):
-    return Event.objects.all()
+    return Event.objects.all().filter(datetime__gte=datetime.datetime.now())
