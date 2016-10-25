@@ -1,7 +1,9 @@
 
-{% load rpo_tags i18n %}
+{% load rpo_tags i18n tz %}
 
-{% if orgs %}
+{% events as events %}
+
+{% if events %}
 <div class="panel panel-default">
     <div class="panel-body">
         <h3>{% trans 'Events' %}</h3>
@@ -9,8 +11,9 @@
             {% for event in events %}
             <li>
                 <span class="fa fa-calendar fa-2x"></span>
-                {{ event.name }}
-                {{ event.datetime }}
+                {{ event.datetime }}<br>
+                {{ event.name }}<br>
+                {{ event.description }}
             </li>
             {% endfor %}
         </ul>
