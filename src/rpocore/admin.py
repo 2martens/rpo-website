@@ -39,6 +39,14 @@ class SupporterPageAdmin(PageAdmin):
             "all": ("campaign.css",)
         }
 
+
+class CarouselAdmin(admin.ModelAdmin):
+    list_display = ('Order', 'caption')
+    
+
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('Order', 'name')
+
 admin.site.register(SupportGroup)
 admin.site.register(SupporterPage, SupporterPageAdmin)
 admin.site.register(NotableSupporter)
@@ -47,7 +55,7 @@ admin.site.register(InformalStatement)
 admin.site.register(StatementPage, PageAdmin)
 admin.site.register(Phase)
 admin.site.register(Process, ProcessAdmin)
-admin.site.register(CarouselItem)
+admin.site.register(CarouselItem, CarouselAdmin)
 admin.site.register(HomepagePage, HomepagePageAdmin)
 admin.site.register(SupportingOrganization)
-admin.site.register(Event)
+admin.site.register(Event, EventAdmin)
