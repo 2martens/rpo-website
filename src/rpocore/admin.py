@@ -1,3 +1,4 @@
+from adminsortable2.admin import SortableAdminMixin
 from django.contrib import admin
 from mezzanine.core.admin import TabularDynamicInlineAdmin, StackedDynamicInlineAdmin
 from mezzanine.pages.admin import PageAdmin
@@ -40,12 +41,16 @@ class SupporterPageAdmin(PageAdmin):
         }
 
 
-class CarouselAdmin(admin.ModelAdmin):
-    list_display = ('Order', 'caption')
-    
+class CarouselAdmin(SortableAdminMixin, admin.ModelAdmin):
+    pass
 
-class EventAdmin(admin.ModelAdmin):
-    list_display = ('Order', 'name')
+
+class EventAdmin(SortableAdminMixin, admin.ModelAdmin):
+    pass
+
+
+class SupportingOrganizationAdmin(SortableAdminMixin, admin.ModelAdmin):
+    pass
 
 admin.site.register(SupportGroup)
 admin.site.register(SupporterPage, SupporterPageAdmin)
@@ -57,5 +62,5 @@ admin.site.register(Phase)
 admin.site.register(Process, ProcessAdmin)
 admin.site.register(CarouselItem, CarouselAdmin)
 admin.site.register(HomepagePage, HomepagePageAdmin)
-admin.site.register(SupportingOrganization)
+admin.site.register(SupportingOrganization, SupportingOrganizationAdmin)
 admin.site.register(Event, EventAdmin)

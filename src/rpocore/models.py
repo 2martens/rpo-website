@@ -207,6 +207,7 @@ class CarouselItem(Orderable):
     class Meta:
         verbose_name = _('Carousel item')
         verbose_name_plural = _('Carousel items')
+        ordering = ('_order',)
 
 
 class SupportingOrganization(Orderable):
@@ -220,6 +221,7 @@ class SupportingOrganization(Orderable):
     class Meta:
         verbose_name = _('Supporting organization')
         verbose_name_plural = _('Supporting organizations')
+        ordering = ('_order',)
 
 
 class Event(Orderable):
@@ -233,3 +235,4 @@ class Event(Orderable):
     class Meta:
         verbose_name = _('Event')
         verbose_name_plural = _('Events')
+        ordering = ('_order',)
