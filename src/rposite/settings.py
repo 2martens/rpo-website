@@ -258,6 +258,7 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     # "mezzanine.twitter",
     "mezzanine.accounts",
+    "adminsortable2",
     # "mezzanine.mobile",
 )
 
