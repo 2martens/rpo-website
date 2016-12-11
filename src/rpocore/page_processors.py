@@ -12,7 +12,7 @@ def support_statements(request, page):
 
 @processor_for(SupporterPage)
 def support_statistics(request, page):
-    all_supporters = Supporter.objects.all()
+    all_supporters = Supporter.objects.all().filter(user__is_active=True)
     uhh_supporters = all_supporters.filter(university='UHH')
     uhh_count = uhh_supporters.count()
     all_count = all_supporters.count()
