@@ -6,7 +6,7 @@ from rpocore.models import SupporterPage, Supporter, SupportGroup, HomepagePage,
 
 @processor_for(SupporterPage)
 def support_statements(request, page):
-    supporters = Supporter.objects.select_related('user').all()
+    supporters = Supporter.objects.select_related('user').all().filter(user__is_active=True)
     return {'supporters': supporters}
 
 
